@@ -39,9 +39,34 @@ int main(int argc, char *argv[])
 	
 	if(!isDir)
 		target =[target stringByDeletingLastPathComponent];
+	
 			
 	[[terminal activate] send];
-	[[terminal doScript:[NSString stringWithFormat:@"clear; cd '%@'",target,nil]]send];
+	
+	bool isDefaultWindow =NO;
+	if([[[[terminal windows] count]send]intValue] ==1 ){
+		TMLReference* firstTermWindow =[[terminal windows]first];
+		if(![[[[firstTermWindow busy] get]send] boolValue]){
+				NSString* windowContents = [[[firstTermWindow contents]get]send];
+				int originalLength = [windowContents length];
+
+				NSMutableString *mutableContents = [[windowContents mutableCopy] autorelease];
+				NSMutableString *mutableContents2 = [[windowContents mutableCopy] autorelease];
+				[mutableContents replaceOccurrencesOfString:@"$" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[mutableContents length])];
+				[mutableContents2 replaceOccurrencesOfString:@"Last login" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[mutableContents2 length])];
+				
+				if([mutableContents length]+1 == originalLength && [mutableContents2 length] < originalLength ){
+					isDefaultWindow =YES;
+					[[[terminal doScript:[NSString stringWithFormat:@"clear; cd '%@'",target,nil]] in:firstTermWindow]send];
+
+				}
+		}
+	}
+	
+	if(!isDefaultWindow){
+		[[terminal doScript:[NSString stringWithFormat:@"clear; cd '%@'",target,nil]]send];
+	}
+	
 	[pool release];
     return 0;
 }
