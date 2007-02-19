@@ -266,8 +266,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
-									<integer>14</integer>
+									<integer>3</integer>
+									<integer>2</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -371,9 +372,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>69449C440B892DFA00A19631</string>
+				<string>69449E980B895B3C00A19631</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>69449C450B892DFA00A19631</string>
+				<string>69449E990B895B3C00A19631</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -507,9 +508,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>69449C650B892F4F00A19631</string>
-		<string>1C0AD2B3069F1EA900FABCE6</string>
-		<string>69449BF80B892CE300A19631</string>
 		<string>/Users/jay/Documents/Projects/cd_to_proj/trunk/plugins/X11_xterm/X11_xterm.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

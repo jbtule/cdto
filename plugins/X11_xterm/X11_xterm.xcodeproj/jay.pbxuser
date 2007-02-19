@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeTarget = 8D5B49AC048680CD000E48DA /* X11_xterm */;
 		addToTargets = (
 			8D5B49AC048680CD000E48DA /* X11_xterm */,
@@ -56,8 +56,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 193539344;
-			PBXWorkspaceStateSaveDate = 193539344;
+			PBXPerProjectTemplateStateSaveDate = 193551098;
+			PBXWorkspaceStateSaveDate = 193551098;
 		};
 		sourceControlManager = 69449BBD0B89259D00A19631 /* Source Control */;
 		userBuildSettings = {

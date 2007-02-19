@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeTarget = 8D5B49AC048680CD000E48DA /* iterm */;
 		addToTargets = (
 			8D5B49AC048680CD000E48DA /* iterm */,
@@ -124,7 +124,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {859, 3234}}";
 			sepNavSelRange = "{3253, 33}";
-			sepNavVisRect = "{{0, 2677}, {859, 557}}";
+			sepNavVisRect = "{{0, 0}, {859, 557}}";
 			sepNavWindowFrame = "{{38, 66}, {898, 686}}";
 		};
 	};
