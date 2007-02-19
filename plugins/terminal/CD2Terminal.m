@@ -14,6 +14,12 @@
 
 -(BOOL)openTermWindowForPath:(NSString*)aPath{
 	@try{
+		//fix quoting issue
+		NSMutableString* fixQuotedPath = [[aPath mutableCopy]autorelease];
+		[fixQuotedPath replaceOccurrencesOfString:@"\"" withString:@"\\\"" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
+	
+
+	
 		TMLApplication* terminal = [[TMLApplication alloc] initWithName:@"Terminal.app"];
 
 		[[terminal activate] send];
@@ -32,14 +38,14 @@
 				
 				if([mutableContents length]+1 == originalLength && [mutableContents2 length] < originalLength ){
 					isDefaultWindow =YES;
-					[[[terminal doScript:[NSString stringWithFormat:@"clear; cd '%@'",aPath,nil]] in:firstTermWindow]send];
+					[[[terminal doScript:[NSString stringWithFormat:@"clear; cd \"%@\"",fixQuotedPath,nil]] in:firstTermWindow]send];
 					
 				}
 			}
 		}
 		
 		if(!isDefaultWindow){
-			[[terminal doScript:[NSString stringWithFormat:@"clear; cd '%@'",aPath,nil]]send];
+			[[terminal doScript:[NSString stringWithFormat:@"clear; cd \"%@\"",fixQuotedPath,nil]]send];
 		}
 		return YES;
 	}@catch(id ue) {
