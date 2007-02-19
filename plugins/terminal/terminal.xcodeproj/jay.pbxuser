@@ -52,12 +52,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 193530834;
-			PBXWorkspaceStateSaveDate = 193530834;
-		};
-		perUserProjectItems = {
-			69449B3F0B890D8600A19631 /* PBXTextBookmark */ = 69449B3F0B890D8600A19631 /* PBXTextBookmark */;
-			69449B400B890D8600A19631 /* PBXTextBookmark */ = 69449B400B890D8600A19631 /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 193547993;
+			PBXWorkspaceStateSaveDate = 193547993;
 		};
 		sourceControlManager = 69449A600B8906BA00A19631 /* Source Control */;
 		userBuildSettings = {
@@ -98,24 +94,6 @@
 			sepNavVisRect = "{{0, 0}, {859, 557}}";
 			sepNavWindowFrame = "{{38, 66}, {898, 686}}";
 		};
-	};
-	69449B3F0B890D8600A19631 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "error: cannot find protocol declaration for 'CD2PluginProtocolV1'";
-		fRef = 69449A620B8906BF00A19631 /* CD2Terminal.h */;
-		rLen = 1;
-		rLoc = 11;
-		rType = 1;
-	};
-	69449B400B890D8600A19631 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 69449A620B8906BF00A19631 /* CD2Terminal.h */;
-		name = "@interface CD2Terminal : NSObject <CD2PluginProtocolV1> {";
-		rLen = 58;
-		rLoc = 196;
-		rType = 0;
-		vrLen = 177;
-		vrLoc = 135;
 	};
 	8D5B49AC048680CD000E48DA /* terminal */ = {
 		activeExec = 0;
