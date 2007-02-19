@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		694495D40B869BCC00A19631 /* Appscript.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 694495CA0B869B9700A19631 /* Appscript.framework */; };
 		694495D50B869BD700A19631 /* Appscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694495CA0B869B9700A19631 /* Appscript.framework */; };
-		694495F40B869F8B00A19631 /* TMLApplicationGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694495E90B869F8B00A19631 /* TMLApplicationGlue.m */; };
-		694495F60B869F8B00A19631 /* TMLCommandGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694495EB0B869F8B00A19631 /* TMLCommandGlue.m */; };
-		694495F80B869F8B00A19631 /* TMLConstantGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694495ED0B869F8B00A19631 /* TMLConstantGlue.m */; };
-		694495FB0B869F8B00A19631 /* TMLReferenceGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694495F00B869F8B00A19631 /* TMLReferenceGlue.m */; };
-		694495FD0B869F8B00A19631 /* TMLReferenceRendererGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694495F20B869F8B00A19631 /* TMLReferenceRendererGlue.m */; };
 		694496320B86A0E500A19631 /* FNApplicationGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694496270B86A0E500A19631 /* FNApplicationGlue.m */; };
 		694496340B86A0E500A19631 /* FNCommandGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694496290B86A0E500A19631 /* FNCommandGlue.m */; };
 		694496360B86A0E500A19631 /* FNConstantGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6944962B0B86A0E500A19631 /* FNConstantGlue.m */; };
@@ -21,6 +16,8 @@
 		6944963B0B86A0E500A19631 /* FNReferenceRendererGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694496300B86A0E500A19631 /* FNReferenceRendererGlue.m */; };
 		694498880B86C47700A19631 /* app.icns in Resources */ = {isa = PBXBuildFile; fileRef = 694498870B86C47700A19631 /* app.icns */; };
 		694499470B86CEFC00A19631 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 694499460B86CEFC00A19631 /* LICENSE */; };
+		69449AB10B89083200A19631 /* terminal.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449AA50B89080600A19631 /* terminal.bundle */; };
+		69449AD20B8909A500A19631 /* CD2PluginProtocolV1.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -41,6 +38,20 @@
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = Appscript;
 		};
+		69449AA40B89080600A19631 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69449A9C0B89080600A19631 /* terminal.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA /* terminal.bundle */;
+			remoteInfo = terminal;
+		};
+		69449AA80B89081500A19631 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69449A9C0B89080600A19631 /* terminal.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA /* terminal */;
+			remoteInfo = terminal;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +62,27 @@
 			dstSubfolderSpec = 10;
 			files = (
 				694495D40B869BCC00A19631 /* Appscript.framework in CopyFiles */,
+				69449AD20B8909A500A19631 /* CD2PluginProtocolV1.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69449AAB0B89081F00A19631 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				69449AB10B89083200A19631 /* terminal.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69449AB60B89085000A19631 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			comments = "Disable Plugin Copy";
+			dstPath = "Contents/PlugIns Disabled";
+			dstSubfolderSpec = 1;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,17 +97,6 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* cd to ..._Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cd to ..._Prefix.pch"; sourceTree = "<group>"; };
 		694495C20B869B9600A19631 /* Appscript.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Appscript.xcodeproj; path = lib/Appscript/Appscript.xcodeproj; sourceTree = "<group>"; };
-		694495E80B869F8B00A19631 /* TMLApplicationGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLApplicationGlue.h; sourceTree = "<group>"; };
-		694495E90B869F8B00A19631 /* TMLApplicationGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TMLApplicationGlue.m; sourceTree = "<group>"; };
-		694495EA0B869F8B00A19631 /* TMLCommandGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLCommandGlue.h; sourceTree = "<group>"; };
-		694495EB0B869F8B00A19631 /* TMLCommandGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TMLCommandGlue.m; sourceTree = "<group>"; };
-		694495EC0B869F8B00A19631 /* TMLConstantGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLConstantGlue.h; sourceTree = "<group>"; };
-		694495ED0B869F8B00A19631 /* TMLConstantGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TMLConstantGlue.m; sourceTree = "<group>"; };
-		694495EE0B869F8B00A19631 /* TMLGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLGlue.h; sourceTree = "<group>"; };
-		694495EF0B869F8B00A19631 /* TMLReferenceGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLReferenceGlue.h; sourceTree = "<group>"; };
-		694495F00B869F8B00A19631 /* TMLReferenceGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TMLReferenceGlue.m; sourceTree = "<group>"; };
-		694495F10B869F8B00A19631 /* TMLReferenceRendererGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLReferenceRendererGlue.h; sourceTree = "<group>"; };
-		694495F20B869F8B00A19631 /* TMLReferenceRendererGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TMLReferenceRendererGlue.m; sourceTree = "<group>"; };
 		694496260B86A0E500A19631 /* FNApplicationGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FNApplicationGlue.h; sourceTree = "<group>"; };
 		694496270B86A0E500A19631 /* FNApplicationGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FNApplicationGlue.m; sourceTree = "<group>"; };
 		694496280B86A0E500A19631 /* FNCommandGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FNCommandGlue.h; sourceTree = "<group>"; };
@@ -89,6 +110,8 @@
 		694496300B86A0E500A19631 /* FNReferenceRendererGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FNReferenceRendererGlue.m; sourceTree = "<group>"; };
 		694498870B86C47700A19631 /* app.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = app.icns; sourceTree = "<group>"; };
 		694499460B86CEFC00A19631 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		69449A9C0B89080600A19631 /* terminal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = terminal.xcodeproj; path = plugins/terminal/terminal.xcodeproj; sourceTree = "<group>"; };
+		69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CD2PluginProtocolV1.h; path = plugins/CD2PluginProtocolV1.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* >cd to ....app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ">cd to ....app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -142,8 +165,9 @@
 		29B97314FDCFA39411CA2CEA /* cd to ... */ = {
 			isa = PBXGroup;
 			children = (
+				69449AD50B8909AB00A19631 /* plugin */,
+				69449A9C0B89080600A19631 /* terminal.xcodeproj */,
 				694496250B86A0E500A19631 /* finder */,
-				694495E70B869F8B00A19631 /* terminal */,
 				694495BE0B869B3B00A19631 /* external projects */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -199,25 +223,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		694495E70B869F8B00A19631 /* terminal */ = {
-			isa = PBXGroup;
-			children = (
-				694495E80B869F8B00A19631 /* TMLApplicationGlue.h */,
-				694495E90B869F8B00A19631 /* TMLApplicationGlue.m */,
-				694495EA0B869F8B00A19631 /* TMLCommandGlue.h */,
-				694495EB0B869F8B00A19631 /* TMLCommandGlue.m */,
-				694495EC0B869F8B00A19631 /* TMLConstantGlue.h */,
-				694495ED0B869F8B00A19631 /* TMLConstantGlue.m */,
-				694495EE0B869F8B00A19631 /* TMLGlue.h */,
-				694495EF0B869F8B00A19631 /* TMLReferenceGlue.h */,
-				694495F00B869F8B00A19631 /* TMLReferenceGlue.m */,
-				694495F10B869F8B00A19631 /* TMLReferenceRendererGlue.h */,
-				694495F20B869F8B00A19631 /* TMLReferenceRendererGlue.m */,
-			);
-			name = terminal;
-			path = glue/terminal;
-			sourceTree = "<group>";
-		};
 		694496250B86A0E500A19631 /* finder */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +242,22 @@
 			path = glue/finder;
 			sourceTree = "<group>";
 		};
+		69449A9D0B89080600A19631 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69449AA50B89080600A19631 /* terminal.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69449AD50B8909AB00A19631 /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */,
+			);
+			name = plugin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,11 +269,14 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				694495D00B869BB500A19631 /* CopyFiles */,
+				69449AAB0B89081F00A19631 /* CopyFiles */,
+				69449AB60B89085000A19631 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				694495CF0B869BA400A19631 /* PBXTargetDependency */,
+				69449AA90B89081500A19631 /* PBXTargetDependency */,
 			);
 			name = ">cd to ...";
 			productInstallPath = "$(HOME)/Applications";
@@ -274,6 +298,10 @@
 					ProductGroup = 694495C30B869B9600A19631 /* Products */;
 					ProjectRef = 694495C20B869B9600A19631 /* Appscript.xcodeproj */;
 				},
+				{
+					ProductGroup = 69449A9D0B89080600A19631 /* Products */;
+					ProjectRef = 69449A9C0B89080600A19631 /* terminal.xcodeproj */;
+				},
 			);
 			targets = (
 				8D1107260486CEB800E47090 /* >cd to ... */,
@@ -287,6 +315,13 @@
 			fileType = wrapper.framework;
 			path = Appscript.framework;
 			remoteRef = 694495C90B869B9700A19631 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		69449AA50B89080600A19631 /* terminal.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = terminal.bundle;
+			remoteRef = 69449AA40B89080600A19631 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -310,11 +345,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				694495F40B869F8B00A19631 /* TMLApplicationGlue.m in Sources */,
-				694495F60B869F8B00A19631 /* TMLCommandGlue.m in Sources */,
-				694495F80B869F8B00A19631 /* TMLConstantGlue.m in Sources */,
-				694495FB0B869F8B00A19631 /* TMLReferenceGlue.m in Sources */,
-				694495FD0B869F8B00A19631 /* TMLReferenceRendererGlue.m in Sources */,
 				694496320B86A0E500A19631 /* FNApplicationGlue.m in Sources */,
 				694496340B86A0E500A19631 /* FNCommandGlue.m in Sources */,
 				694496360B86A0E500A19631 /* FNConstantGlue.m in Sources */,
@@ -330,6 +360,11 @@
 			isa = PBXTargetDependency;
 			name = Appscript;
 			targetProxy = 694495CE0B869BA400A19631 /* PBXContainerItemProxy */;
+		};
+		69449AA90B89081500A19631 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = terminal;
+			targetProxy = 69449AA80B89081500A19631 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -355,6 +390,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Info.plist;
@@ -372,6 +408,7 @@
 					ppc,
 					i386,
 				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;

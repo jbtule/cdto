@@ -1,0 +1,570 @@
+#!/usr/bin/env python
+
+from codecs import getencoder
+import re, time, os.path, sys, getopt
+
+from osaterminology.makeidentifier import getconverter
+from appscript import terminology
+from aem import Application, findapp, AEType
+
+######################################################################
+# default tables
+######################################################################
+
+# empty the default py-appscript type-code tables, as that info is already hardcoded in ASConstant
+terminology._typebycode = {}
+terminology._typebyname = {}
+
+# patch the existing default reference-code tables
+code, name = terminology._referencebycode['pID  ']
+terminology._referencebycode['pID  '] = (code, name + '_')
+
+for oldname, newname in [('open_location', 'openLocation'), ('print_', 'print'), ('id', 'id_')]:
+	terminology._referencebyname[newname] = terminology._referencebyname[oldname]
+	del terminology._referencebyname[oldname]
+
+
+
+######################################################################
+# renderers
+######################################################################
+
+prefixtag = 'PREFIX'
+interfacemethodspattern = re.compile('^(-.+?) {', re.M)
+
+legalcodechars = ''
+for i in range(32, 126):
+	c = chr(i)
+	if c not in '\\\'"':
+		legalcodechars += c
+
+hexencode = getencoder('hex_codec')
+
+def formatcode(code):
+	if [c for c in code if c not in legalcodechars]:
+		return '0x' + hexencode(code)[0]
+	else:
+		return "'%s'" % code
+
+
+######################################################################
+
+
+def renderConstantClass(interface, implementation):
+	constantClass = prefix + 'Constant'
+	print >> interface, '@interface %s : ASConstant' % constantClass
+	print >> implementation, '@implementation ' + constantClass
+	#######
+	print >> interface, '+ (id)constantWithCode:(OSType)code_;'
+	print >> implementation, '''
++ (id)constantWithCode:(OSType)code_ {
+    switch (code_) {'''
+	for code, name in typebycode:
+		code = formatcode(code)
+		print >> implementation, '''        case %s: return [self %s];''' % (code, name.name)
+	print >> implementation, '''        default: return [[self superclass] constantWithCode: code_];
+    }
+}
+'''
+	#######
+	prevkind = None
+	for name, code in typebyname:
+		kind = code.__class__.__name__
+		if prevkind != kind:
+			for t in [interface, implementation]:
+				print >> t, '\n/* %s */\n' % {'AEEnum': 'Enumerators', 'AEType': 'Types and properties'}[kind]
+		prevkind = kind
+		print >> interface, '+ (%s *)%s;' % (constantClass, name)
+		print >> implementation, '''+ (%s *)%s {
+    static %sConstant *constantObj;
+    if (!constantObj)
+        constantObj = [%sConstant constantWithName: @"%s" type: %s code: %s];
+    return constantObj;
+}\n''' % (constantClass, name, 
+				prefix,
+				prefix, name, isinstance(code, AEType) and 'typeType' or 'typeEnumerated', 
+						formatcode(code.code))
+	print >> interface, '@end\n\n'
+	print >> implementation, '@end\n\n'
+
+
+######################################################################
+
+
+def renderCommandClasses(interface, implementation):
+	for name, (kind, data) in referencebyname:
+		if kind != 'c':
+			continue
+		commandclass = prefix + name[0].upper() + name[1:] + 'Command'
+		code = data[0]
+		params = data[1].items()
+		params.sort()
+		print >> interface, '@interface %s : ASCommand' % commandclass
+		print >> implementation, '@implementation %s\n' % commandclass
+		for paramname, paramcode in params:
+			print >> interface, '- (%s *)%s:(id)value;' % (commandclass, paramname)
+			print >> implementation, ('- (%s *)%s:(id)value {\n'
+					'    [AS_event setParameter: value forKeyword: %s];\n'
+					'    return self;\n'
+					'}\n') % (commandclass, paramname, formatcode(paramcode))
+		print >> interface, '@end\n\n'
+		print >> implementation, '@end\n\n'
+
+
+######################################################################
+
+
+def renderReferenceClass(interface, implementation):
+	print >> interface, '@interface %sReference : ASReference' % prefix
+	print >> implementation, '@implementation %sReference' % prefix
+	print >> implementation, '''
+- (NSString *)description {
+	return [%sReferenceRenderer render: AS_aemReference];
+}''' % prefix
+	prevkind = None
+	for name, (kind, data) in referencebyname:
+		if kind != prevkind:
+			for t in [interface, implementation]:
+				print >> t, '\n/* %s */\n' % {'c': 'Commands', 'p': 'Properties', 'e': 'Elements'}[kind]
+		prevkind = kind
+		if kind == 'c':
+			commandclass = prefix + name[0].upper() + name[1:] + 'Command'
+			for directParam in ['', ':(id)directParameter']:
+				print >> interface, '- (%s *)%s;' % (commandclass, name + directParam)
+				code = data[0]
+				print >> implementation, ('- (%s *)%s {\n'
+						'    return [%s commandWithAppData: AS_appData\n'
+						'                         eventClass: %s\n'
+						'                            eventID: %s\n'
+						'                    directParameter: %s\n'
+						'                    parentReference: self];\n'
+						
+						'}\n') % (commandclass, name + directParam,
+								commandclass,
+								formatcode(code[:4]),
+								formatcode(code[4:]),
+								directParam and 'directParameter' or 'nil')
+		else:
+			print >> interface, '- (%sReference *)%s;' % (prefix, name)
+			print >> implementation, ('- (%sReference *)%s {\n'
+					'    return [%sReference referenceWithAppData: AS_appData\n'
+					'                    aemReference: [AS_aemReference %s: %s]];\n'
+					'}\n') % (prefix, name, prefix, {'p': 'property', 'e': 'elements'}[kind], formatcode(data))
+	renderSelectors(interface, implementation)
+	print >> interface, '@end\n\n'
+	print >> implementation, '@end\n\n'
+
+
+_selectorimplementation = """
+/***********************************/
+
+// ordinal selectors
+
+- (PREFIXReference *)first {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference first]];
+}
+
+- (PREFIXReference *)middle {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference middle]];
+}
+
+- (PREFIXReference *)last {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference last]];
+}
+
+- (PREFIXReference *)any {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference any]];
+}
+
+// by-index, by-name, by-id selectors
+ 
+- (PREFIXReference *)at:(long)index {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference at: index]];
+}
+
+- (PREFIXReference *)byIndex:(id)index { // index is normally NSNumber, but may occasionally be other types
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference byIndex: index]];
+}
+
+- (PREFIXReference *)byName:(NSString *)name {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference byName: name]];
+}
+
+- (PREFIXReference *)byID:(id)id_ {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference byID: id_]];
+}
+
+// by-relative-position selectors
+
+- (PREFIXReference *)previous:(ASConstant *)class_ {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference previous: [class_ AS_code]]];
+}
+
+- (PREFIXReference *)next:(ASConstant *)class_ {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference next: [class_ AS_code]]];
+}
+
+// by-range selector
+
+- (PREFIXReference *)at:(long)fromIndex to:(long)toIndex {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference at: fromIndex to: toIndex]];
+}
+
+- (PREFIXReference *)byRange:(id)fromObject to:(id)toObject {
+    // takes two con-based references, with other values being expanded as necessary
+    if ([fromObject isKindOfClass: [PREFIXReference class]])
+        fromObject = [fromObject AS_aemReference];
+    if ([toObject isKindOfClass: [PREFIXReference class]])
+        toObject = [toObject AS_aemReference];
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference byRange: fromObject to: toObject]];
+}
+
+// by-test selector
+
+- (PREFIXReference *)byTest:(PREFIXReference *)testReference {
+    // note: getting AS_aemReference won't work for ASDynamicReference
+    return [PREFIXReference referenceWithAppData: AS_appData
+                    aemReference: [AS_aemReference byTest: [testReference AS_aemReference]]];
+}
+
+// insertion location selectors
+
+- (PREFIXReference *)start {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference start]];
+}
+
+- (PREFIXReference *)end {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference end]];
+}
+
+- (PREFIXReference *)before {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference before]];
+}
+
+- (PREFIXReference *)after {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference after]];
+}
+
+// Comparison and logic tests
+
+- (PREFIXReference *)greaterThan:(id)object {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference greaterThan: object]];
+}
+
+- (PREFIXReference *)greaterOrEquals:(id)object {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference greaterOrEquals: object]];
+}
+
+- (PREFIXReference *)equals:(id)object {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference equals: object]];
+}
+
+- (PREFIXReference *)notEquals:(id)object {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference notEquals: object]];
+}
+
+- (PREFIXReference *)lessThan:(id)object {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference lessThan: object]];
+}
+
+- (PREFIXReference *)lessOrEquals:(id)object {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference lessOrEquals: object]];
+}
+
+- (PREFIXReference *)startsWith:(id)object {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference startsWith: object]];
+}
+
+- (PREFIXReference *)endsWith:(id)object {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference endsWith: object]];
+}
+
+- (PREFIXReference *)contains:(id)object {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference contains: object]];
+}
+
+- (PREFIXReference *)isIn:(id)object {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference isIn: object]];
+}
+
+- (PREFIXReference *)AND:(id)remainingOperands {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference AND: remainingOperands]];
+}
+
+- (PREFIXReference *)OR:(id)remainingOperands {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference OR: remainingOperands]];
+}
+
+- (PREFIXReference *)NOT {
+    return [PREFIXReference referenceWithAppData: AS_appData
+                                 aemReference: [AS_aemReference NOT]];
+}
+"""
+
+def renderSelectors(interface, implementation):
+	selectors = _selectorimplementation.replace(prefixtag, prefix)
+	for methoddef in interfacemethodspattern.findall(selectors):
+		print >> interface, '%s;' % methoddef
+	print >> implementation, selectors
+
+
+######################################################################
+
+
+_applicationclassimplementation = """
+
+@implementation PREFIXApplication
+
+// clients shouldn't need to call this next method themselves
+- (id)initWithTargetType:(ASTargetType)targetType_ data:(id)targetData_ {
+    ASAppData *appData;
+    
+    appData = [[ASAppData alloc] initWithApplicationClass: [AEMApplication class]
+                                            constantClass: [PREFIXConstant class]
+                                           referenceClass: [PREFIXReference class]
+                                               targetType: targetType_
+                                               targetData: targetData_];
+    self = [super initWithAppData: appData aemReference: AEMApp];
+    if (!self) return self;
+    return self;
+}
+
+// initialisers
+
+- (id)init {
+    return [self initWithTargetType: kASTargetCurrent data: nil];
+}
+
+- (id)initWithName:(NSString *)name {
+    return [self initWithTargetType: kASTargetName data: name];
+}
+
+// TO DO: initWithBundleID, initWithSignature
+
+- (id)initWithPath:(NSString *)path {
+    return [self initWithTargetType: kASTargetPath data: path];    
+}
+
+- (id)initWithURL:(NSURL *)url {
+    return [self initWithTargetType: kASTargetURL data: url];
+}
+
+- (id)initWithPID:(pid_t)pid {
+    return [self initWithTargetType: kASTargetPID data: [NSNumber numberWithUnsignedLong: pid]];
+}
+
+- (id)initWithDescriptor:(NSAppleEventDescriptor *)desc {
+    return [self initWithTargetType: kASTargetDescriptor data: desc];
+}
+
+@end
+"""
+
+
+def renderApplicationClass(interface, implementation):
+	classdef = _applicationclassimplementation.replace(prefixtag, prefix)
+	print >> interface, '@interface %sApplication : %sReference' % (prefix, prefix)
+	for methoddef in interfacemethodspattern.findall(classdef):
+		print >> interface, '%s;' % methoddef
+	print >> interface, '@end\n'
+	print >> implementation, classdef
+
+
+######################################################################
+
+
+def renderReferenceRenderer(interface, implementation):
+	print >> interface, '@interface %sReferenceRenderer : ASReferenceRenderer' % prefix
+	print >> implementation, '@implementation %sReferenceRenderer' % prefix
+	for methodname, codeprefix in [('property', 'p'), ('element', 'e')]:
+		print >> implementation, '''
+- (NSString *)%sByCode:(OSType)code {
+    switch (code) {''' % methodname
+		for code, (_, name) in referencebycode:
+			if code[0] == codeprefix:
+				print >> implementation, '        case %s: return @"%s";' % (formatcode(code[1:]), name)
+		print >> implementation, '''
+        default: return nil;
+    }
+}'''
+	print >> implementation, '''
++ (NSString *)render:(id)object {
+    return [%sReferenceRenderer render: object withPrefix: @"%s"];
+}
+''' % (prefix, prefix)
+	print >> interface, '@end'
+	print >> implementation, '@end'
+
+
+
+######################################################################
+
+
+gluefiles = [
+('ConstantGlue', '''
+#import "Appscript/Appscript.h"
+''', renderConstantClass),
+
+('CommandGlue', '''
+#import "Appscript/Appscript.h"
+''', renderCommandClasses),
+
+('ReferenceGlue', '''
+#import "Appscript/Appscript.h"
+#import "PREFIXCommandGlue.h"
+#import "PREFIXReferenceRendererGlue.h"
+
+#define PREFIXApp ((PREFIXReference *)[PREFIXReference referenceWithAppData: nil aemReference: AEMApp])
+#define PREFIXCon ((PREFIXReference *)[PREFIXReference referenceWithAppData: nil aemReference: AEMCon])
+#define PREFIXIts ((PREFIXReference *)[PREFIXReference referenceWithAppData: nil aemReference: AEMIts])
+''', renderReferenceClass),
+
+('ApplicationGlue', '''
+#import "Appscript/Appscript.h"
+#import "PREFIXConstantGlue.h"
+#import "PREFIXReferenceGlue.h"
+''', renderApplicationClass),
+
+('ReferenceRendererGlue', '''
+#import "Appscript/Appscript.h"
+''', renderReferenceRenderer),
+]
+
+
+def renderGlueFiles(outdir, prefix, gluename, imports, fn):
+	interface = open(os.path.join(outdir, prefix + gluename + '.h'), 'w')
+	implementation = open(os.path.join(outdir, prefix + gluename + '.m'), 'w')
+	print >> interface, ("""/*
+ * %s.h
+ *
+ * %%s
+ * %%s
+ *
+ */
+
+#import <Appscript/Appscript.h>
+
+%s
+""" % (prefix + gluename, imports)).replace(prefixtag, prefix) % (apppath, time.strftime('%Y-%m-%d %H:%M:%S (%Z)'))
+	print >> implementation, ("""/*
+ * %s.m
+ *
+ * %%s
+ * %%s
+ *
+ */
+
+#import "%s.h"
+""" % (prefix + gluename, prefix + gluename)).replace(prefixtag, prefix) % (apppath, time.strftime('%Y-%m-%d %H:%M:%S (%Z)'))
+	fn(interface, implementation)
+	interface.close()
+	implementation.close()
+
+######################################################################
+# parse argv
+
+opts, args = getopt.getopt(sys.argv[1:], 'p:o:') # -p = prefix; -o = output directory
+opts = dict(opts)
+
+if not args or opts.has_key('-h'):
+	print """osaglue -- Generate .h and .m glue files for objc-appscript.
+
+SYNOPSIS
+
+    osaglue [-o output-directory] prefix [application-name]
+
+DESCRIPTION
+
+The -o option may be used to specify the directory to which the glue files should be written.
+
+The prefix argument is prepended to the names of all glue files and classes. Developers should specify a unique prefix that won't cause namespace conflicts in their project.
+
+The application-name argument may be the name or full path of the application for which glues should be generated. If omitted, the resulting glue files will contain only the default terminology provided by appscript.
+
+EXAMPLES
+
+To generate TEGlue.h and associated files for TextEdit:
+
+    osaglue -o ~/TEGlue TE TextEdit
+    
+"""
+	sys.exit()
+
+outdir = opts.get('-o', '')
+prefix = args[0]
+
+
+######################################################################
+# get tables
+
+if args[1:]:
+	apppath = findapp.byname(args[1])
+	typebycode, typebyname, referencebycode, referencebyname = \
+			terminology.tablesforapp(Application(apppath), 'objc-appscript')
+else:
+	apppath = '<default terminology>'
+	typebycode, typebyname, referencebycode, referencebyname = \
+			terminology.tablesforaetedata([], 'objc-appscript')
+
+typebyname = typebyname.items()
+typebyname.sort(lambda a, b: cmp(a[1].__class__.__name__, b[1].__class__.__name__) or cmp(a[0], b[0]))
+typebycode = typebycode.items()
+typebycode.sort(lambda a, b: cmp(a[1].name, b[1].name))
+referencebyname = referencebyname.items()
+referencebyname.sort(lambda a, b: cmp(a[1][0], b[1][0]) or cmp(a[0], b[0]))
+referencebycode = referencebycode.items()
+referencebycode.sort(lambda a, b: cmp(a[1][1], b[1][1]))
+
+
+######################################################################
+# render glues
+
+for gluename, imports, fn in gluefiles:
+	renderGlueFiles(outdir, prefix, gluename, imports, fn)
+
+interface = open(os.path.join(outdir, prefix + 'Glue.h'), 'w')
+print >> interface, '''
+/*
+ * PREFIXGlue.h
+ *
+ * %s
+ * %s
+ *
+ */
+
+#import "Appscript/Appscript.h"
+#import "PREFIXApplicationGlue.h"
+#import "PREFIXCommandGlue.h"
+#import "PREFIXConstantGlue.h"
+#import "PREFIXReferenceGlue.h"
+#import "PREFIXReferenceRendererGlue.h"
+'''.replace(prefixtag, prefix) % (apppath, time.strftime('%Y-%m-%d %H:%M:%S (%Z)'))
+interface.close()

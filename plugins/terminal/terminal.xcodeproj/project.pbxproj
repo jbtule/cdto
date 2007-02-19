@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69449A640B8906BF00A19631 /* CD2Terminal.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449A630B8906BF00A19631 /* CD2Terminal.m */; };
+		69449A760B89070100A19631 /* TMLApplicationGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449A6C0B89070100A19631 /* TMLApplicationGlue.m */; };
+		69449A770B89070100A19631 /* TMLCommandGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449A6E0B89070100A19631 /* TMLCommandGlue.m */; };
+		69449A780B89070100A19631 /* TMLConstantGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449A700B89070100A19631 /* TMLConstantGlue.m */; };
+		69449A790B89070100A19631 /* TMLReferenceGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449A730B89070100A19631 /* TMLReferenceGlue.m */; };
+		69449A7A0B89070100A19631 /* TMLReferenceRendererGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449A750B89070100A19631 /* TMLReferenceRendererGlue.m */; };
+		69449A8E0B89076A00A19631 /* Appscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69449A850B89074700A19631 /* Appscript.framework */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69449A840B89074700A19631 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69449A800B89074700A19631 /* Appscript.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = Appscript;
+		};
+		69449A8C0B89075A00A19631 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69449A800B89074700A19631 /* Appscript.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Appscript;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF630370AF2F00C91783 /* terminal_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = terminal_Prefix.pch; sourceTree = "<group>"; };
+		69449A620B8906BF00A19631 /* CD2Terminal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CD2Terminal.h; sourceTree = "<group>"; };
+		69449A630B8906BF00A19631 /* CD2Terminal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CD2Terminal.m; sourceTree = "<group>"; };
+		69449A6B0B89070100A19631 /* TMLApplicationGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLApplicationGlue.h; sourceTree = "<group>"; };
+		69449A6C0B89070100A19631 /* TMLApplicationGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TMLApplicationGlue.m; sourceTree = "<group>"; };
+		69449A6D0B89070100A19631 /* TMLCommandGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLCommandGlue.h; sourceTree = "<group>"; };
+		69449A6E0B89070100A19631 /* TMLCommandGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TMLCommandGlue.m; sourceTree = "<group>"; };
+		69449A6F0B89070100A19631 /* TMLConstantGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLConstantGlue.h; sourceTree = "<group>"; };
+		69449A700B89070100A19631 /* TMLConstantGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TMLConstantGlue.m; sourceTree = "<group>"; };
+		69449A710B89070100A19631 /* TMLGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLGlue.h; sourceTree = "<group>"; };
+		69449A720B89070100A19631 /* TMLReferenceGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLReferenceGlue.h; sourceTree = "<group>"; };
+		69449A730B89070100A19631 /* TMLReferenceGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TMLReferenceGlue.m; sourceTree = "<group>"; };
+		69449A740B89070100A19631 /* TMLReferenceRendererGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TMLReferenceRendererGlue.h; sourceTree = "<group>"; };
+		69449A750B89070100A19631 /* TMLReferenceRendererGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TMLReferenceRendererGlue.m; sourceTree = "<group>"; };
+		69449A800B89074700A19631 /* Appscript.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Appscript.xcodeproj; path = ../../lib/Appscript/Appscript.xcodeproj; sourceTree = SOURCE_ROOT; };
+		69449AF80B890BDD00A19631 /* CD2PluginProtocolV1.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CD2PluginProtocolV1.h; path = ../CD2PluginProtocolV1.h; sourceTree = SOURCE_ROOT; };
+		8D5B49B6048680CD000E48DA /* terminal.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = terminal.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69449A8E0B89076A00A19631 /* Appscript.framework in Frameworks */,
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* terminal */ = {
+			isa = PBXGroup;
+			children = (
+				69449AF80B890BDD00A19631 /* CD2PluginProtocolV1.h */,
+				69449A800B89074700A19631 /* Appscript.xcodeproj */,
+				69449A6A0B89070100A19631 /* glue */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = terminal;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				69449A620B8906BF00A19631 /* CD2Terminal.h */,
+				69449A630B8906BF00A19631 /* CD2Terminal.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* terminal.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF630370AF2F00C91783 /* terminal_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		69449A6A0B89070100A19631 /* glue */ = {
+			isa = PBXGroup;
+			children = (
+				69449A6B0B89070100A19631 /* TMLApplicationGlue.h */,
+				69449A6C0B89070100A19631 /* TMLApplicationGlue.m */,
+				69449A6D0B89070100A19631 /* TMLCommandGlue.h */,
+				69449A6E0B89070100A19631 /* TMLCommandGlue.m */,
+				69449A6F0B89070100A19631 /* TMLConstantGlue.h */,
+				69449A700B89070100A19631 /* TMLConstantGlue.m */,
+				69449A710B89070100A19631 /* TMLGlue.h */,
+				69449A720B89070100A19631 /* TMLReferenceGlue.h */,
+				69449A730B89070100A19631 /* TMLReferenceGlue.m */,
+				69449A740B89070100A19631 /* TMLReferenceRendererGlue.h */,
+				69449A750B89070100A19631 /* TMLReferenceRendererGlue.m */,
+			);
+			path = glue;
+			sourceTree = "<group>";
+		};
+		69449A810B89074700A19631 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69449A850B89074700A19631 /* Appscript.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* terminal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "terminal" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69449A8D0B89075A00A19631 /* PBXTargetDependency */,
+			);
+			name = terminal;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = terminal;
+			productReference = 8D5B49B6048680CD000E48DA /* terminal.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "terminal" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* terminal */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 69449A810B89074700A19631 /* Products */;
+					ProjectRef = 69449A800B89074700A19631 /* Appscript.xcodeproj */;
+				},
+			);
+			targets = (
+				8D5B49AC048680CD000E48DA /* terminal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		69449A850B89074700A19631 /* Appscript.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Appscript.framework;
+			remoteRef = 69449A840B89074700A19631 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69449A640B8906BF00A19631 /* CD2Terminal.m in Sources */,
+				69449A760B89070100A19631 /* TMLApplicationGlue.m in Sources */,
+				69449A770B89070100A19631 /* TMLCommandGlue.m in Sources */,
+				69449A780B89070100A19631 /* TMLConstantGlue.m in Sources */,
+				69449A790B89070100A19631 /* TMLReferenceGlue.m in Sources */,
+				69449A7A0B89070100A19631 /* TMLReferenceRendererGlue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69449A8D0B89075A00A19631 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Appscript;
+			targetProxy = 69449A8C0B89075A00A19631 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = terminal_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = terminal;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = terminal_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = terminal;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "terminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "terminal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
