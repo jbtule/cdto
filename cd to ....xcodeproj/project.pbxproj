@@ -20,6 +20,7 @@
 		69449AD20B8909A500A19631 /* CD2PluginProtocolV1.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */; };
 		69449C330B892D7600A19631 /* X11_xterm.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449C110B892D0B00A19631 /* X11_xterm.bundle */; };
 		69449D890B894DCB00A19631 /* iterm.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449D880B894DBF00A19631 /* iterm.bundle */; };
+		69E297D20B8BD61E00A2C50F /* pathfinder.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69E297B40B8BD51B00A2C50F /* pathfinder.bundle */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -82,6 +83,20 @@
 			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
 			remoteInfo = iterm;
 		};
+		69E297B30B8BD51B00A2C50F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA /* pathfinder.bundle */;
+			remoteInfo = pathfinder;
+		};
+		69E297CE0B8BD5FA00A2C50F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA /* pathfinder */;
+			remoteInfo = pathfinder;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +128,7 @@
 			dstPath = "Contents/PlugIns Disabled";
 			dstSubfolderSpec = 1;
 			files = (
+				69E297D20B8BD61E00A2C50F /* pathfinder.bundle in CopyFiles */,
 				69449D890B894DCB00A19631 /* iterm.bundle in CopyFiles */,
 				69449C330B892D7600A19631 /* X11_xterm.bundle in CopyFiles */,
 			);
@@ -146,6 +162,7 @@
 		69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CD2PluginProtocolV1.h; path = plugins/CD2PluginProtocolV1.h; sourceTree = "<group>"; };
 		69449C090B892D0B00A19631 /* X11_xterm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = X11_xterm.xcodeproj; path = plugins/X11_xterm/X11_xterm.xcodeproj; sourceTree = "<group>"; };
 		69449D830B894DBF00A19631 /* iterm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iterm.xcodeproj; path = plugins/iterm/iterm.xcodeproj; sourceTree = "<group>"; };
+		69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pathfinder.xcodeproj; path = plugins/pathfinder/pathfinder.xcodeproj; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* >cd to ....app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ">cd to ....app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -243,6 +260,7 @@
 		694495BE0B869B3B00A19631 /* external projects */ = {
 			isa = PBXGroup;
 			children = (
+				69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */,
 				69449A9C0B89080600A19631 /* terminal.xcodeproj */,
 				69449C090B892D0B00A19631 /* X11_xterm.xcodeproj */,
 				69449D830B894DBF00A19631 /* iterm.xcodeproj */,
@@ -310,6 +328,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		69E297AC0B8BD51B00A2C50F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69E297B40B8BD51B00A2C50F /* pathfinder.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -331,6 +357,7 @@
 				69449AA90B89081500A19631 /* PBXTargetDependency */,
 				69449C2E0B892D5F00A19631 /* PBXTargetDependency */,
 				69449D8D0B894DD300A19631 /* PBXTargetDependency */,
+				69E297CF0B8BD5FA00A2C50F /* PBXTargetDependency */,
 			);
 			name = ">cd to ...";
 			productInstallPath = "$(HOME)/Applications";
@@ -355,6 +382,10 @@
 				{
 					ProductGroup = 69449D840B894DBF00A19631 /* Products */;
 					ProjectRef = 69449D830B894DBF00A19631 /* iterm.xcodeproj */;
+				},
+				{
+					ProductGroup = 69E297AC0B8BD51B00A2C50F /* Products */;
+					ProjectRef = 69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */;
 				},
 				{
 					ProductGroup = 69449A9D0B89080600A19631 /* Products */;
@@ -398,6 +429,13 @@
 			fileType = wrapper.cfbundle;
 			path = iterm.bundle;
 			remoteRef = 69449D870B894DBF00A19631 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		69E297B40B8BD51B00A2C50F /* pathfinder.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = pathfinder.bundle;
+			remoteRef = 69E297B30B8BD51B00A2C50F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -451,6 +489,11 @@
 			isa = PBXTargetDependency;
 			name = iterm;
 			targetProxy = 69449D8C0B894DD300A19631 /* PBXContainerItemProxy */;
+		};
+		69E297CF0B8BD5FA00A2C50F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pathfinder;
+			targetProxy = 69E297CE0B8BD5FA00A2C50F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

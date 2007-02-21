@@ -99,6 +99,7 @@
 		perUserProjectItems = {
 			69E2974B0B897E9100A2C50F /* PBXTextBookmark */ = 69E2974B0B897E9100A2C50F /* PBXTextBookmark */;
 			69E2974C0B897E9100A2C50F /* PBXTextBookmark */ = 69E2974C0B897E9100A2C50F /* PBXTextBookmark */;
+			69E297AA0B8BD50800A2C50F /* PBXTextBookmark */ = 69E297AA0B8BD50800A2C50F /* PBXTextBookmark */;
 		};
 		sourceControlManager = 694495AE0B869AB900A19631 /* Source Control */;
 		userBuildSettings = {
@@ -324,6 +325,16 @@
 		vrLen = 623;
 		vrLoc = 1800;
 	};
+	69E297AA0B8BD50800A2C50F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 81";
+		rLen = 0;
+		rLoc = 2153;
+		rType = 0;
+		vrLen = 396;
+		vrLoc = 1800;
+	};
 	8D1107260486CEB800E47090 /* >cd to ... */ = {
 		activeExec = 0;
 		executables = (
@@ -333,7 +344,7 @@
 	8D1107310486CEB800E47090 /* Info.plist */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {859, 557}}";
-			sepNavSelRange = "{654, 0}";
+			sepNavSelRange = "{757, 0}";
 			sepNavVisRect = "{{0, 0}, {859, 557}}";
 			sepNavWindowFrame = "{{38, 66}, {898, 686}}";
 		};
