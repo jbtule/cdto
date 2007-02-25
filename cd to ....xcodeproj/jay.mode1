@@ -276,12 +276,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>30</integer>
-									<integer>29</integer>
+									<integer>11</integer>
+									<integer>4</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 206}, {282, 589}}</string>
+							<string>{{0, 128}, {282, 589}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -518,8 +519,8 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>694495AA0B869AB900A19631</string>
-		<string>/Users/jay/Documents/Projects/cd_to_proj/trunk/cd to ....xcodeproj</string>
 		<string>1C0AD2B3069F1EA900FABCE6</string>
+		<string>/Users/jay/Documents/Projects/cd_to_proj/trunk/cd to ....xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 130 1280 648 0 0 1280 778 </string>

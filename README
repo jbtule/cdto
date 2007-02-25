@@ -1,0 +1,23 @@
+>cd to...
+By Jay Tuley
+http://code.google.com/p/cdto
+
+Usage:
+
+To install "> cd to ..." copy it to your Applications folder, and then from the applications folder drag it into the Finder toolbar.
+
+To use with iTerm or X11/xterm, using the finder get info on ">cd to ..." from it's installed location and under the section labeled "plugins" enable the proper plugin (while disabling the others). Next time you run  ">cd to ..." it should with the correct application.
+
+
+Changes:
+Version 2.1.1
+* Fixed bug involving apostrophes in path
+* PathFinder plugin (Finder->Pathfinder) contributed by Brian Koponen
+Version 2.1
+* Plugin archtexture allowing support for other terminals
+* Default plugins for iTerm & X11/xterm
+* Terminal plugin will try to avoid opening two windows on terminal.app's launch
+Version 2.0
+* Ported to objective-c using appscript, boosting launch & execution speed
+* properly resolves aliases
+* no longer shows icon in dock on launch
