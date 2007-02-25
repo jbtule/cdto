@@ -54,7 +54,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					153,
+					737,
 					20,
 					48,
 					43,
@@ -93,13 +93,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 193560003;
-			PBXWorkspaceStateSaveDate = 193560003;
-		};
-		perUserProjectItems = {
-			69E2974B0B897E9100A2C50F /* PBXTextBookmark */ = 69E2974B0B897E9100A2C50F /* PBXTextBookmark */;
-			69E2974C0B897E9100A2C50F /* PBXTextBookmark */ = 69E2974C0B897E9100A2C50F /* PBXTextBookmark */;
-			69E297AA0B8BD50800A2C50F /* PBXTextBookmark */ = 69E297AA0B8BD50800A2C50F /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 194060378;
+			PBXWorkspaceStateSaveDate = 194060378;
 		};
 		sourceControlManager = 694495AE0B869AB900A19631 /* Source Control */;
 		userBuildSettings = {
@@ -107,9 +102,9 @@
 	};
 	29B97316FDCFA39411CA2CEA /* main.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {908, 1316}}";
-			sepNavSelRange = "{2398, 0}";
-			sepNavVisRect = "{{0, 975}, {814, 251}}";
+			sepNavIntBoundsRect = "{{0, 0}, {859, 1260}}";
+			sepNavSelRange = "{2197, 0}";
+			sepNavVisRect = "{{0, 0}, {859, 557}}";
 			sepNavWindowFrame = "{{283, 92}, {898, 686}}";
 		};
 	};
@@ -306,34 +301,6 @@
 		location = main.ob;
 		modificationTime = 193539650.262251;
 		state = 1;
-	};
-	69E2974B0B897E9100A2C50F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "error: parse error before 'replaceOccurrencesOfString'";
-		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
-		rLen = 0;
-		rLoc = 75;
-		rType = 1;
-	};
-	69E2974C0B897E9100A2C50F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
-		name = "main.m: 85";
-		rLen = 0;
-		rLoc = 2153;
-		rType = 0;
-		vrLen = 623;
-		vrLoc = 1800;
-	};
-	69E297AA0B8BD50800A2C50F /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
-		name = "main.m: 81";
-		rLen = 0;
-		rLoc = 2153;
-		rType = 0;
-		vrLen = 396;
-		vrLoc = 1800;
 	};
 	8D1107260486CEB800E47090 /* >cd to ... */ = {
 		activeExec = 0;

@@ -87,14 +87,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8D5B49B6048680CD000E48DA /* pathfinder.bundle */;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
 			remoteInfo = pathfinder;
 		};
 		69E297CE0B8BD5FA00A2C50F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D5B49AC048680CD000E48DA /* pathfinder */;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
 			remoteInfo = pathfinder;
 		};
 /* End PBXContainerItemProxy section */
@@ -349,6 +349,7 @@
 				694495D00B869BB500A19631 /* CopyFiles */,
 				69449AAB0B89081F00A19631 /* CopyFiles */,
 				69449AB60B89085000A19631 /* CopyFiles */,
+				69E816730B9122F800AD2C2C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -452,6 +453,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69E816730B9122F800AD2C2C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SOURCE_ROOT/versioning/version.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
