@@ -9,7 +9,6 @@
 		breakpoints = (
 			69449C410B892DE800A19631 /* CD2X11XTermPlugin.m:26 */,
 		);
-		breakpointsGroup = 69449C960B89312200A19631 /* XCBreakpointsBucket */;
 		codeSenseManager = 69449BBE0B89259D00A19631 /* Code sense */;
 		perUserDictionary = {
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
@@ -56,8 +55,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 193560193;
-			PBXWorkspaceStateSaveDate = 193560193;
+			PBXPerProjectTemplateStateSaveDate = 240881419;
+			PBXWorkspaceStateSaveDate = 240881419;
+		};
+		perUserProjectItems = {
+			696649030E5BA2B200FE90E2 /* PBXTextBookmark */ = 696649030E5BA2B200FE90E2 /* PBXTextBookmark */;
+			696649040E5BA2B200FE90E2 /* PBXTextBookmark */ = 696649040E5BA2B200FE90E2 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 69449BBD0B89259D00A19631 /* Source Control */;
 		userBuildSettings = {
@@ -85,8 +88,9 @@
 	};
 	69449BC00B8925F900A19631 /* CD2X11XTermPlugin.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {859, 574}}";
-			sepNavSelRange = "{716, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {421, 616}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 134}";
 			sepNavVisRect = "{{0, 0}, {859, 557}}";
 			sepNavWindowFrame = "{{91, 85}, {898, 686}}";
 		};
@@ -113,21 +117,36 @@
 		);
 		breakpointStyle = 0;
 		continueAfterActions = 0;
+		countType = 0;
 		delayBeforeContinue = 0;
 		fileReference = 69449BC00B8925F900A19631 /* CD2X11XTermPlugin.m */;
 		functionName = "-openTermWindowForPath:";
-		hitCount = 1;
+		hitCount = 0;
+		ignoreCount = 0;
 		lineNumber = 26;
 		location = X11_xterm;
-		modificationTime = 193539652.860764;
-		state = 1;
+		modificationTime = 240887086.271791;
+		state = 0;
 	};
-	69449C960B89312200A19631 /* XCBreakpointsBucket */ = {
-		isa = XCBreakpointsBucket;
-		name = "Project Breakpoints";
-		objects = (
-			69449C410B892DE800A19631 /* CD2X11XTermPlugin.m:26 */,
-		);
+	696649030E5BA2B200FE90E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 69449BC00B8925F900A19631 /* CD2X11XTermPlugin.m */;
+		name = "CD2X11XTermPlugin.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 134;
+		vrLoc = 0;
+	};
+	696649040E5BA2B200FE90E2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 69449BC00B8925F900A19631 /* CD2X11XTermPlugin.m */;
+		name = "CD2X11XTermPlugin.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 134;
+		vrLoc = 0;
 	};
 	8D5B49AC048680CD000E48DA /* X11_xterm */ = {
 		activeExec = 0;

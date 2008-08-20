@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		693218AA0E5BDADE00CFB0C3 /* leop_app.icns in Resources */ = {isa = PBXBuildFile; fileRef = 693218A90E5BDADE00CFB0C3 /* leop_app.icns */; };
 		694495D40B869BCC00A19631 /* Appscript.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 694495CA0B869B9700A19631 /* Appscript.framework */; };
 		694495D50B869BD700A19631 /* Appscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694495CA0B869B9700A19631 /* Appscript.framework */; };
 		694496320B86A0E500A19631 /* FNApplicationGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694496270B86A0E500A19631 /* FNApplicationGlue.m */; };
@@ -128,8 +129,8 @@
 			dstPath = "Contents/PlugIns Disabled";
 			dstSubfolderSpec = 1;
 			files = (
-				69E297D20B8BD61E00A2C50F /* pathfinder.bundle in CopyFiles */,
 				69449D890B894DCB00A19631 /* iterm.bundle in CopyFiles */,
+				69E297D20B8BD61E00A2C50F /* pathfinder.bundle in CopyFiles */,
 				69449C330B892D7600A19631 /* X11_xterm.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +145,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* cd to ..._Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cd to ..._Prefix.pch"; sourceTree = "<group>"; };
+		693218A90E5BDADE00CFB0C3 /* leop_app.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = leop_app.icns; sourceTree = "<group>"; };
 		694495C20B869B9600A19631 /* Appscript.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Appscript.xcodeproj; path = lib/Appscript/Appscript.xcodeproj; sourceTree = "<group>"; };
 		694496260B86A0E500A19631 /* FNApplicationGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FNApplicationGlue.h; sourceTree = "<group>"; };
 		694496270B86A0E500A19631 /* FNApplicationGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FNApplicationGlue.m; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				693218A90E5BDADE00CFB0C3 /* leop_app.icns */,
 				694499460B86CEFC00A19631 /* LICENSE */,
 				694498870B86C47700A19631 /* app.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -372,6 +375,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "cd to ..." */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 29B97314FDCFA39411CA2CEA /* cd to ... */;
 			projectDirPath = "";
@@ -397,6 +401,7 @@
 					ProjectRef = 69449C090B892D0B00A19631 /* X11_xterm.xcodeproj */;
 				},
 			);
+			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* >cd to ... */,
 			);
@@ -449,6 +454,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				694498880B86C47700A19631 /* app.icns in Resources */,
 				694499470B86CEFC00A19631 /* LICENSE in Resources */,
+				693218AA0E5BDADE00CFB0C3 /* leop_app.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +573,8 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
@@ -577,6 +585,8 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;

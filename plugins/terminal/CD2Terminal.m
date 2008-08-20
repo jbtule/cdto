@@ -16,9 +16,16 @@
 	@try{
 		//fix quoting issue
 		NSMutableString* fixQuotedPath = [[aPath mutableCopy]autorelease];
-		[fixQuotedPath replaceOccurrencesOfString:@"\"" withString:@"\\\"" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
-	
+		[fixQuotedPath replaceOccurrencesOfString:@"'" withString:@"\\'" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
+	/*	[fixQuotedPath replaceOccurrencesOfString:@"\"" withString:@"\\\"" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
+		[fixQuotedPath replaceOccurrencesOfString:@" " withString:@"\\ " options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
+		[fixQuotedPath replaceOccurrencesOfString:@"'" withString:@"\\'" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
+		[fixQuotedPath replaceOccurrencesOfString:@"`" withString:@"\\`" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
+		[fixQuotedPath replaceOccurrencesOfString:@")" withString:@"\\)" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
+		[fixQuotedPath replaceOccurrencesOfString:@"(" withString:@"\\(" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
+*/
 
+		NSString* tCommandSequence =@"printf %%b '\\033c'; cd $'%@'";
 	
 		TMLApplication* terminal = [[TMLApplication alloc] initWithName:@"Terminal.app"];
 
@@ -38,14 +45,14 @@
 				
 				if([mutableContents length]+1 == originalLength && [mutableContents2 length] < originalLength ){
 					isDefaultWindow =YES;
-					[[[terminal doScript:[NSString stringWithFormat:@"clear; cd \"%@\"",fixQuotedPath,nil]] in:firstTermWindow]send];
+					[[[terminal doScript:[NSString stringWithFormat:tCommandSequence,fixQuotedPath,nil]] in:firstTermWindow]send];
 					
 				}
 			}
 		}
 		
 		if(!isDefaultWindow){
-			[[terminal doScript:[NSString stringWithFormat:@"clear; cd \"%@\"",fixQuotedPath,nil]]send];
+			[[terminal doScript:[NSString stringWithFormat:tCommandSequence,fixQuotedPath,nil]]send];
 		}
 		return YES;
 	}@catch(id ue) {

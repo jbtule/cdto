@@ -57,7 +57,7 @@
 		69449D550B894CC800A19631 /* ITRMReferenceRendererGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ITRMReferenceRendererGlue.h; sourceTree = "<group>"; };
 		69449D560B894CC800A19631 /* ITRMReferenceRendererGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ITRMReferenceRendererGlue.m; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* iterm.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iterm.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +204,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "iterm" */;
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 089C166AFE841209C02AAC07 /* iterm */;
 			projectDirPath = "";
@@ -213,6 +214,7 @@
 					ProjectRef = 69449D3F0B894C2200A19631 /* Appscript.xcodeproj */;
 				},
 			);
+			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* iterm */,
 			);

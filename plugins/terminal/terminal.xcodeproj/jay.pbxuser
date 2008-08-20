@@ -1,10 +1,13 @@
 // !$*UTF8*$!
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeTarget = 8D5B49AC048680CD000E48DA /* terminal */;
 		addToTargets = (
 			8D5B49AC048680CD000E48DA /* terminal */,
+		);
+		breakpoints = (
+			693217C00E5BAE2600CFB0C3 /* CD2Terminal.m:41 */,
 		);
 		codeSenseManager = 69449A610B8906BA00A19631 /* Code sense */;
 		perUserDictionary = {
@@ -13,7 +16,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					243,
+					450,
 					20,
 					48,
 					43,
@@ -35,8 +38,8 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					200,
-					63,
+					203,
+					60,
 					20,
 					48,
 					43,
@@ -52,12 +55,61 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 193560626;
-			PBXWorkspaceStateSaveDate = 193560626;
+			PBXPerProjectTemplateStateSaveDate = 240896538;
+			PBXWorkspaceStateSaveDate = 240896538;
+		};
+		perUserProjectItems = {
+			693218150E5BB06D00CFB0C3 /* PBXTextBookmark */ = 693218150E5BB06D00CFB0C3 /* PBXTextBookmark */;
+			693218700E5BCA3300CFB0C3 /* PBXTextBookmark */ = 693218700E5BCA3300CFB0C3 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 69449A600B8906BA00A19631 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	089C167EFE841241C02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1127, 551}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 93}";
+			sepNavWindowFrame = "{{61, 52}, {1186, 679}}";
+		};
+	};
+	693217C00E5BAE2600CFB0C3 /* CD2Terminal.m:41 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 69449A630B8906BF00A19631 /* CD2Terminal.m */;
+		functionName = "-openTermWindowForPath:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 41;
+		location = terminal;
+		modificationTime = 240902251.552339;
+		state = 0;
+	};
+	693218150E5BB06D00CFB0C3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 69449A630B8906BF00A19631 /* CD2Terminal.m */;
+		name = "CD2Terminal.m: 33";
+		rLen = 0;
+		rLoc = 1565;
+		rType = 0;
+		vrLen = 1068;
+		vrLoc = 1594;
+	};
+	693218700E5BCA3300CFB0C3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 69449A630B8906BF00A19631 /* CD2Terminal.m */;
+		name = "CD2Terminal.m: 33";
+		rLen = 0;
+		rLoc = 1565;
+		rType = 0;
+		vrLen = 1068;
+		vrLoc = 1594;
 	};
 	69449A600B8906BA00A19631 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -73,18 +125,20 @@
 	};
 	69449A620B8906BF00A19631 /* CD2Terminal.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {459, 280}}";
-			sepNavSelRange = "{196, 58}";
+			sepNavIntBoundsRect = "{{0, 0}, {839, 558}}";
+			sepNavSelRange = "{231, 19}";
+			sepNavVisRange = "{0, 312}";
 			sepNavVisRect = "{{0, 94}, {459, 186}}";
 			sepNavWindowFrame = "{{15, 87}, {898, 686}}";
 		};
 	};
 	69449A630B8906BF00A19631 /* CD2Terminal.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1040, 840}}";
-			sepNavSelRange = "{292, 216}";
+			sepNavIntBoundsRect = "{{0, 0}, {1032, 826}}";
+			sepNavSelRange = "{1565, 0}";
+			sepNavVisRange = "{1594, 1068}";
 			sepNavVisRect = "{{0, 187}, {859, 557}}";
-			sepNavWindowFrame = "{{38, 66}, {898, 686}}";
+			sepNavWindowFrame = "{{38, 73}, {1186, 679}}";
 		};
 	};
 	69449AF80B890BDD00A19631 /* CD2PluginProtocolV1.h */ = {

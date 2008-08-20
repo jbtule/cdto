@@ -10,6 +10,11 @@ To use with iTerm or X11/xterm, using the finder get info on ">cd to ..." from i
 
 
 Changes:
+Version 2.2
+* Clear Scroll-back on Terminal plugin (Thanks to Marc Liyanage for the original tip)
+* Fixed issues with special characters in file path bug that existed for Terminal and iTerm plugin
+* iTerm plugin will try to avoid opening two windows on iTerm launch
+* Leopard icon
 Version 2.1.1
 * Fixed bug involving apostrophes in path
 * PathFinder plugin (Finder->Pathfinder) contributed by Brian Koponen

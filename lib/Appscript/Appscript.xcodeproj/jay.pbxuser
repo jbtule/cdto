@@ -6,7 +6,6 @@
 		addToTargets = (
 			8DC2EF4F0486A6940098B216 /* Appscript */,
 		);
-		breakpointsGroup = 694497CD0B86B58A00A19631 /* XCBreakpointsBucket */;
 		codeSenseManager = 694495820B86995C00A19631 /* Code sense */;
 		perUserDictionary = {
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
@@ -53,8 +52,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 193377635;
-			PBXWorkspaceStateSaveDate = 193377635;
+			PBXPerProjectTemplateStateSaveDate = 240881439;
+			PBXWorkspaceStateSaveDate = 240881439;
 		};
 		sourceControlManager = 694495810B86995C00A19631 /* Source Control */;
 		userBuildSettings = {
@@ -135,12 +134,6 @@
 	694495820B86995C00A19631 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
-	};
-	694497CD0B86B58A00A19631 /* XCBreakpointsBucket */ = {
-		isa = XCBreakpointsBucket;
-		name = Appscript;
-		objects = (
-		);
 	};
 	8DC2EF4F0486A6940098B216 /* Appscript */ = {
 		activeExec = 0;
