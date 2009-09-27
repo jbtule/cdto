@@ -1,7 +1,9 @@
 // !$*UTF8*$!
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Release;
+		activeArchitecturePreference = i386;
+		activeBuildConfigurationName = Debug;
+		activeSDKPreference = macosx10.6;
 		activeTarget = 8D5B49AC048680CD000E48DA /* iterm */;
 		addToTargets = (
 			8D5B49AC048680CD000E48DA /* iterm */,
@@ -15,7 +17,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					147,
+					833,
 					20,
 					48,
 					43,
@@ -37,8 +39,8 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					200,
-					63,
+					203,
+					60,
 					20,
 					48,
 					43,
@@ -54,8 +56,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 240896567;
-			PBXWorkspaceStateSaveDate = 240896567;
+			PBXPerProjectTemplateStateSaveDate = 275718067;
+			PBXWorkspaceStateSaveDate = 275718067;
+		};
+		perUserProjectItems = {
+			69C8AC5D106F1F6C00C4DE0D /* PBXTextBookmark */ = 69C8AC5D106F1F6C00C4DE0D /* PBXTextBookmark */;
+			69C8AC5F106F1F6C00C4DE0D /* PBXTextBookmark */ = 69C8AC5F106F1F6C00C4DE0D /* PBXTextBookmark */;
+			69C8AC79106F1FD800C4DE0D /* PBXTextBookmark */ = 69C8AC79106F1FD800C4DE0D /* PBXTextBookmark */;
 		};
 		sourceControlManager = 69449D230B894B9700A19631 /* Source Control */;
 		userBuildSettings = {
@@ -79,11 +86,11 @@
 	};
 	69449D210B894B9700A19631 /* CD2ITerm.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1032, 798}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{201, 1677}";
+			sepNavIntBoundsRect = "{{0, 0}, {1202, 754}}";
+			sepNavSelRange = "{1565, 0}";
+			sepNavVisRange = "{321, 1590}";
 			sepNavVisRect = "{{0, 0}, {859, 557}}";
-			sepNavWindowFrame = "{{395, 44}, {898, 686}}";
+			sepNavWindowFrame = "{{128, 53}, {898, 686}}";
 		};
 	};
 	69449D230B894B9700A19631 /* Source Control */ = {
@@ -91,6 +98,9 @@
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
 		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
 		};
 		scmType = "";
 	};
@@ -100,43 +110,50 @@
 	};
 	69449D270B894BAA00A19631 /* CD2PluginProtocolV1.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {859, 557}}";
-			sepNavSelRange = "{199, 46}";
+			sepNavIntBoundsRect = "{{0, 0}, {839, 558}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 251}";
 			sepNavVisRect = "{{0, 0}, {859, 557}}";
 			sepNavWindowFrame = "{{38, 66}, {898, 686}}";
 		};
 	};
-	69449D4F0B894CC800A19631 /* ITRMCommandGlue.m */ = {
+	69C8AC12106F1ABE00C4DE0D /* iTerm.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {859, 3234}}";
-			sepNavSelRange = "{3253, 33}";
-			sepNavVisRect = "{{0, 0}, {859, 557}}";
-			sepNavWindowFrame = "{{38, 66}, {898, 686}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 3666}}";
+			sepNavSelRange = "{6805, 32}";
+			sepNavVisRange = "{8354, 1611}";
+			sepNavWindowFrame = "{{15, 113}, {918, 660}}";
 		};
 	};
-	69449D510B894CC800A19631 /* ITRMConstantGlue.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {859, 7980}}";
-			sepNavSelRange = "{15827, 23}";
-			sepNavVisRect = "{{0, 6158}, {859, 557}}";
-			sepNavWindowFrame = "{{38, 66}, {898, 686}}";
-		};
+	69C8AC5D106F1F6C00C4DE0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 69449D210B894B9700A19631 /* CD2ITerm.m */;
+		name = "CD2ITerm.m: 44";
+		rLen = 9;
+		rLoc = 1644;
+		rType = 0;
+		vrLen = 1030;
+		vrLoc = 878;
 	};
-	69449D520B894CC800A19631 /* ITRMGlue.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {859, 557}}";
-			sepNavSelRange = "{7, 10}";
-			sepNavVisRect = "{{0, 0}, {859, 557}}";
-			sepNavWindowFrame = "{{15, 87}, {898, 686}}";
-		};
+	69C8AC5F106F1F6C00C4DE0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 69C8AC12106F1ABE00C4DE0D /* iTerm.h */;
+		name = "iTerm.h: 207";
+		rLen = 32;
+		rLoc = 6805;
+		rType = 0;
+		vrLen = 837;
+		vrLoc = 6708;
 	};
-	69449D540B894CC800A19631 /* ITRMReferenceGlue.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {859, 12516}}";
-			sepNavSelRange = "{12749, 16}";
-			sepNavVisRect = "{{0, 5021}, {859, 557}}";
-			sepNavWindowFrame = "{{15, 87}, {898, 686}}";
-		};
+	69C8AC79106F1FD800C4DE0D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 69C8AC12106F1ABE00C4DE0D /* iTerm.h */;
+		name = "iTerm.h: 207";
+		rLen = 32;
+		rLoc = 6805;
+		rType = 0;
+		vrLen = 1611;
+		vrLoc = 8354;
 	};
 	8D5B49AC048680CD000E48DA /* iterm */ = {
 		activeExec = 0;

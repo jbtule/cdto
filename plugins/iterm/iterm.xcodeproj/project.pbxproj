@@ -8,32 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		69449D220B894B9700A19631 /* CD2ITerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449D210B894B9700A19631 /* CD2ITerm.m */; };
-		69449D570B894CC800A19631 /* ITRMApplicationGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449D4D0B894CC800A19631 /* ITRMApplicationGlue.m */; };
-		69449D580B894CC800A19631 /* ITRMCommandGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449D4F0B894CC800A19631 /* ITRMCommandGlue.m */; };
-		69449D590B894CC800A19631 /* ITRMConstantGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449D510B894CC800A19631 /* ITRMConstantGlue.m */; };
-		69449D5A0B894CC800A19631 /* ITRMReferenceGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449D540B894CC800A19631 /* ITRMReferenceGlue.m */; };
-		69449D5B0B894CC800A19631 /* ITRMReferenceRendererGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 69449D560B894CC800A19631 /* ITRMReferenceRendererGlue.m */; };
-		69449D750B894D8000A19631 /* Appscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69449D440B894C2200A19631 /* Appscript.framework */; };
+		69C8AA01106E885400C4DE0D /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8AA00106E885400C4DE0D /* ScriptingBridge.framework */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		69449D430B894C2200A19631 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69449D3F0B894C2200A19631 /* Appscript.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = Appscript;
-		};
-		69449D650B894D1300A19631 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69449D3F0B894C2200A19631 /* Appscript.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Appscript;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -44,18 +22,8 @@
 		69449D200B894B9700A19631 /* CD2ITerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CD2ITerm.h; sourceTree = "<group>"; };
 		69449D210B894B9700A19631 /* CD2ITerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CD2ITerm.m; sourceTree = "<group>"; };
 		69449D270B894BAA00A19631 /* CD2PluginProtocolV1.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = CD2PluginProtocolV1.h; path = ../CD2PluginProtocolV1.h; sourceTree = SOURCE_ROOT; };
-		69449D3F0B894C2200A19631 /* Appscript.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Appscript.xcodeproj; path = ../../lib/Appscript/Appscript.xcodeproj; sourceTree = SOURCE_ROOT; };
-		69449D4C0B894CC800A19631 /* ITRMApplicationGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ITRMApplicationGlue.h; sourceTree = "<group>"; };
-		69449D4D0B894CC800A19631 /* ITRMApplicationGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ITRMApplicationGlue.m; sourceTree = "<group>"; };
-		69449D4E0B894CC800A19631 /* ITRMCommandGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ITRMCommandGlue.h; sourceTree = "<group>"; };
-		69449D4F0B894CC800A19631 /* ITRMCommandGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ITRMCommandGlue.m; sourceTree = "<group>"; };
-		69449D500B894CC800A19631 /* ITRMConstantGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ITRMConstantGlue.h; sourceTree = "<group>"; };
-		69449D510B894CC800A19631 /* ITRMConstantGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ITRMConstantGlue.m; sourceTree = "<group>"; };
-		69449D520B894CC800A19631 /* ITRMGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ITRMGlue.h; sourceTree = "<group>"; };
-		69449D530B894CC800A19631 /* ITRMReferenceGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ITRMReferenceGlue.h; sourceTree = "<group>"; };
-		69449D540B894CC800A19631 /* ITRMReferenceGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ITRMReferenceGlue.m; sourceTree = "<group>"; };
-		69449D550B894CC800A19631 /* ITRMReferenceRendererGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ITRMReferenceRendererGlue.h; sourceTree = "<group>"; };
-		69449D560B894CC800A19631 /* ITRMReferenceRendererGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ITRMReferenceRendererGlue.m; sourceTree = "<group>"; };
+		69C8AA00106E885400C4DE0D /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = /System/Library/Frameworks/ScriptingBridge.framework; sourceTree = "<absolute>"; };
+		69C8AC12106F1ABE00C4DE0D /* iTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iTerm.h; path = ../../../../../../testh/iTerm.h; sourceTree = SOURCE_ROOT; };
 		8D5B49B6048680CD000E48DA /* iterm.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iterm.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -66,8 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69449D750B894D8000A19631 /* Appscript.framework in Frameworks */,
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				69C8AA01106E885400C4DE0D /* ScriptingBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,9 +45,8 @@
 		089C166AFE841209C02AAC07 /* iterm */ = {
 			isa = PBXGroup;
 			children = (
-				69449D4B0B894CC800A19631 /* glue */,
-				69449D3F0B894C2200A19631 /* Appscript.xcodeproj */,
 				69449D270B894BAA00A19631 /* CD2PluginProtocolV1.h */,
+				69C8AC12106F1ABE00C4DE0D /* iTerm.h */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -120,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+				69C8AA00106E885400C4DE0D /* ScriptingBridge.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -150,32 +118,6 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		69449D400B894C2200A19631 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				69449D440B894C2200A19631 /* Appscript.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		69449D4B0B894CC800A19631 /* glue */ = {
-			isa = PBXGroup;
-			children = (
-				69449D4C0B894CC800A19631 /* ITRMApplicationGlue.h */,
-				69449D4D0B894CC800A19631 /* ITRMApplicationGlue.m */,
-				69449D4E0B894CC800A19631 /* ITRMCommandGlue.h */,
-				69449D4F0B894CC800A19631 /* ITRMCommandGlue.m */,
-				69449D500B894CC800A19631 /* ITRMConstantGlue.h */,
-				69449D510B894CC800A19631 /* ITRMConstantGlue.m */,
-				69449D520B894CC800A19631 /* ITRMGlue.h */,
-				69449D530B894CC800A19631 /* ITRMReferenceGlue.h */,
-				69449D540B894CC800A19631 /* ITRMReferenceGlue.m */,
-				69449D550B894CC800A19631 /* ITRMReferenceRendererGlue.h */,
-				69449D560B894CC800A19631 /* ITRMReferenceRendererGlue.m */,
-			);
-			path = glue;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,7 +132,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				69449D660B894D1300A19631 /* PBXTargetDependency */,
 			);
 			name = iterm;
 			productInstallPath = "$(HOME)/Library/Bundles";
@@ -208,28 +149,12 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 089C166AFE841209C02AAC07 /* iterm */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 69449D400B894C2200A19631 /* Products */;
-					ProjectRef = 69449D3F0B894C2200A19631 /* Appscript.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* iterm */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		69449D440B894C2200A19631 /* Appscript.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Appscript.framework;
-			remoteRef = 69449D430B894C2200A19631 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D5B49AF048680CD000E48DA /* Resources */ = {
@@ -248,23 +173,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				69449D220B894B9700A19631 /* CD2ITerm.m in Sources */,
-				69449D570B894CC800A19631 /* ITRMApplicationGlue.m in Sources */,
-				69449D580B894CC800A19631 /* ITRMCommandGlue.m in Sources */,
-				69449D590B894CC800A19631 /* ITRMConstantGlue.m in Sources */,
-				69449D5A0B894CC800A19631 /* ITRMReferenceGlue.m in Sources */,
-				69449D5B0B894CC800A19631 /* ITRMReferenceRendererGlue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		69449D660B894D1300A19631 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Appscript;
-			targetProxy = 69449D650B894D1300A19631 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {

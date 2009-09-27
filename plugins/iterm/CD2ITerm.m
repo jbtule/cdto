@@ -7,7 +7,7 @@
 //
 
 #import "CD2ITerm.h"
-#import "ITRMGlue.h"
+#import "iTerm.h"
 
 @implementation CD2ITerm
 -(BOOL)openTermWindowForPath:(NSString*)aPath{
@@ -18,13 +18,13 @@
 		
 		[fixQuotedPath replaceOccurrencesOfString:@"'" withString:@"\\'" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
 
-		ITRMApplication* iterm = [[ITRMApplication alloc] initWithName:@"iterm.app"];
-		[[iterm activate]send];
+		iTermITermApplication* iterm = [SBApplication applicationWithBundleIdentifier:@"net.sourceforge.iTerm"];
+		[iterm activate];
 
 		bool isDefaultWindow =NO;
-		ITRMReference* terminal=nil;
-		if([[[[iterm windows] count]send]intValue] ==1 ){
-			NSString* windowContents =[[[[[iterm currentTerminal]currentSession] text]get]send];
+		iTermTerminal* terminal=nil;
+		if([[iterm windows] count] ==1 ){
+			NSString* windowContents =iterm.currentTerminal.currentSession.contents;
 
 				int originalLength = [windowContents length];
 				
@@ -35,15 +35,16 @@
 				
 				if([mutableContents length]+1 == originalLength && [mutableContents2 length] < originalLength ){
 					isDefaultWindow =YES;
-					terminal = [[[iterm currentTerminal]get]send];
+					terminal = iterm.currentTerminal;
 				}
 			}
 		
 		if(!isDefaultWindow){
-			terminal =[[[iterm make]new_:[ITRMConstant terminal]] send];
-			[[[terminal launch_] session:@"Default Session"] send];
+			terminal =[[[iterm classForScriptingClass:@"terminal"] alloc] init];
+			[iterm.terminals addObject: terminal];
+			[terminal launchSession:@"Default Session"] ;
 		}
-		[[[[terminal currentSession] write] text:[NSString stringWithFormat:tCommandSequence,fixQuotedPath,nil]]send];
+		[terminal.currentSession writeContentsOfFile:nil text:[NSString stringWithFormat:tCommandSequence,fixQuotedPath,nil]];
 
 		
 

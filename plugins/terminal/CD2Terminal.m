@@ -8,7 +8,7 @@
 
 #import "CD2Terminal.h"
 
-#import "TMLGlue.h"
+#import "Terminal.h"
 
 @implementation CD2Terminal
 
@@ -27,15 +27,17 @@
 
 		NSString* tCommandSequence =@"printf %%b '\\033c'; cd $'%@'";
 	
-		TMLApplication* terminal = [[TMLApplication alloc] initWithName:@"Terminal.app"];
+		TerminalApplication* terminal = [SBApplication applicationWithBundleIdentifier:@"com.apple.Terminal"];
 
-		[[terminal activate] send];
+		[terminal activate];
 		
 		bool isDefaultWindow =NO;
-		if([[[[terminal windows] count]send]intValue] ==1 ){
-			TMLReference* firstTermWindow =[[terminal windows]first];
-			if(![[[[firstTermWindow busy] get]send] boolValue]){
-				NSString* windowContents = [[[firstTermWindow contents]get]send];
+		if([[[terminal windows] get] count] ==1 ){
+			TerminalWindow* firstTermWindow =[[terminal windows] objectAtIndex:0];
+			TerminalTab* firstTab =[[firstTermWindow tabs] objectAtIndex:0];
+
+			if(!firstTab.busy){
+				NSString* windowContents = firstTab.contents;
 				int originalLength = [windowContents length];
 				
 				NSMutableString *mutableContents = [[windowContents mutableCopy] autorelease];
@@ -45,14 +47,14 @@
 				
 				if([mutableContents length]+1 == originalLength && [mutableContents2 length] < originalLength ){
 					isDefaultWindow =YES;
-					[[[terminal doScript:[NSString stringWithFormat:tCommandSequence,fixQuotedPath,nil]] in:firstTermWindow]send];
+					[terminal doScript:[NSString stringWithFormat:tCommandSequence,fixQuotedPath,nil] in:firstTermWindow];
 					
 				}
 			}
 		}
 		
 		if(!isDefaultWindow){
-			[[terminal doScript:[NSString stringWithFormat:tCommandSequence,fixQuotedPath,nil]]send];
+			[terminal doScript:[NSString stringWithFormat:tCommandSequence,fixQuotedPath,nil] in:nil];
 		}
 		return YES;
 	}@catch(id ue) {

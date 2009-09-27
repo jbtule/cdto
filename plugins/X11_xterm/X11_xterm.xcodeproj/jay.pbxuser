@@ -1,7 +1,9 @@
 // !$*UTF8*$!
 {
 	089C1669FE841209C02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Release;
+		activeArchitecturePreference = i386;
+		activeBuildConfigurationName = Debug;
+		activeSDKPreference = macosx10.6;
 		activeTarget = 8D5B49AC048680CD000E48DA /* X11_xterm */;
 		addToTargets = (
 			8D5B49AC048680CD000E48DA /* X11_xterm */,
@@ -55,12 +57,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 240881419;
-			PBXWorkspaceStateSaveDate = 240881419;
-		};
-		perUserProjectItems = {
-			696649030E5BA2B200FE90E2 /* PBXTextBookmark */ = 696649030E5BA2B200FE90E2 /* PBXTextBookmark */;
-			696649040E5BA2B200FE90E2 /* PBXTextBookmark */ = 696649040E5BA2B200FE90E2 /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 275679020;
+			PBXWorkspaceStateSaveDate = 275679020;
 		};
 		sourceControlManager = 69449BBD0B89259D00A19631 /* Source Control */;
 		userBuildSettings = {
@@ -71,6 +69,9 @@
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
 		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
 		};
 		scmType = "";
 	};
@@ -125,28 +126,9 @@
 		ignoreCount = 0;
 		lineNumber = 26;
 		location = X11_xterm;
-		modificationTime = 240887086.271791;
+		modificationTime = 275715661.170886;
+		originalNumberOfMultipleMatches = 1;
 		state = 0;
-	};
-	696649030E5BA2B200FE90E2 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 69449BC00B8925F900A19631 /* CD2X11XTermPlugin.m */;
-		name = "CD2X11XTermPlugin.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 134;
-		vrLoc = 0;
-	};
-	696649040E5BA2B200FE90E2 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 69449BC00B8925F900A19631 /* CD2X11XTermPlugin.m */;
-		name = "CD2X11XTermPlugin.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 134;
-		vrLoc = 0;
 	};
 	8D5B49AC048680CD000E48DA /* X11_xterm */ = {
 		activeExec = 0;

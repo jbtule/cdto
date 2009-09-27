@@ -7,18 +7,21 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "FNGlue.h"
 #import "CD2PluginProtocolV1.h"
+#import "Finder.h"
 
 NSString* getPathToFrontFinderWindow(){
-	FNApplication* finder = [[FNApplication alloc] initWithName:@"Finder.app"];
 	
-	FNReference* frontWindow =[[finder windows] first];
+	FinderApplication* finder = [SBApplication applicationWithBundleIdentifier:@"com.apple.Finder"];
+			
 	
 	
+	FinderFinderWindow* frontWindow =[[finder windows]  objectAtIndex:0];
 	
-	NSString* target =[[[[frontWindow target] URL] get] send];
-	NSURL* url =[NSURL URLWithString:target];
+	FinderItem* target =  [frontWindow.properties objectForKey:@"target"] ;
+	 
+	
+	NSURL* url =[NSURL URLWithString:target.URL];
 	
 	FSRef fsRef;
 	Boolean isDir =NO;
@@ -33,12 +36,13 @@ NSString* getPathToFrontFinderWindow(){
 		}
 	}
 
-	target = [url path];
+	NSString* path = [url path];
 
-	if(!isDir)
-	target =[target stringByDeletingLastPathComponent];
+	if(!isDir){
+		path = [path stringByDeletingLastPathComponent];
+	}
 
-	return target;
+	return path;
 }
 
 NSArray* loadPlugins(){

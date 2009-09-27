@@ -8,40 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		693218AA0E5BDADE00CFB0C3 /* leop_app.icns in Resources */ = {isa = PBXBuildFile; fileRef = 693218A90E5BDADE00CFB0C3 /* leop_app.icns */; };
-		694495D40B869BCC00A19631 /* Appscript.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 694495CA0B869B9700A19631 /* Appscript.framework */; };
-		694495D50B869BD700A19631 /* Appscript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694495CA0B869B9700A19631 /* Appscript.framework */; };
-		694496320B86A0E500A19631 /* FNApplicationGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694496270B86A0E500A19631 /* FNApplicationGlue.m */; };
-		694496340B86A0E500A19631 /* FNCommandGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694496290B86A0E500A19631 /* FNCommandGlue.m */; };
-		694496360B86A0E500A19631 /* FNConstantGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6944962B0B86A0E500A19631 /* FNConstantGlue.m */; };
-		694496390B86A0E500A19631 /* FNReferenceGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6944962E0B86A0E500A19631 /* FNReferenceGlue.m */; };
-		6944963B0B86A0E500A19631 /* FNReferenceRendererGlue.m in Sources */ = {isa = PBXBuildFile; fileRef = 694496300B86A0E500A19631 /* FNReferenceRendererGlue.m */; };
 		694498880B86C47700A19631 /* app.icns in Resources */ = {isa = PBXBuildFile; fileRef = 694498870B86C47700A19631 /* app.icns */; };
 		694499470B86CEFC00A19631 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 694499460B86CEFC00A19631 /* LICENSE */; };
-		69449AB10B89083200A19631 /* terminal.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449AA50B89080600A19631 /* terminal.bundle */; };
+		69449AB10B89083200A19631 /* terminal.bundle in Copy Default Plugin */ = {isa = PBXBuildFile; fileRef = 69449AA50B89080600A19631 /* terminal.bundle */; };
 		69449AD20B8909A500A19631 /* CD2PluginProtocolV1.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */; };
-		69449C330B892D7600A19631 /* X11_xterm.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449C110B892D0B00A19631 /* X11_xterm.bundle */; };
-		69449D890B894DCB00A19631 /* iterm.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449D880B894DBF00A19631 /* iterm.bundle */; };
-		69E297D20B8BD61E00A2C50F /* pathfinder.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69E297B40B8BD51B00A2C50F /* pathfinder.bundle */; };
+		69449C330B892D7600A19631 /* X11_xterm.bundle in Copy Disabled Plugins */ = {isa = PBXBuildFile; fileRef = 69449C110B892D0B00A19631 /* X11_xterm.bundle */; };
+		69449D890B894DCB00A19631 /* iterm.bundle in Copy Disabled Plugins */ = {isa = PBXBuildFile; fileRef = 69449D880B894DBF00A19631 /* iterm.bundle */; };
+		69C8A98E106E818900C4DE0D /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8A98D106E818900C4DE0D /* ScriptingBridge.framework */; };
+		69C8AA71106E8F5800C4DE0D /* Finder.app in Resources */ = {isa = PBXBuildFile; fileRef = 69C8AA70106E8F5800C4DE0D /* Finder.app */; };
+		69C8AA89106EE02F00C4DE0D /* Finder.app in Sources */ = {isa = PBXBuildFile; fileRef = 69C8AA70106E8F5800C4DE0D /* Finder.app */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		69C8AA6F106E8F0C00C4DE0D /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.app";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).h",
+			);
+			script = "sdef \"$INPUT_FILE_PATH\" | sdp -fh -o \"$DERIVED_FILES_DIR\" --basename \"$INPUT_FILE_BASE\" --bundleid `defaults read \"$INPUT_FILE_PATH/Contents/Info\" CFBundleIdentifier`";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
-		694495C90B869B9700A19631 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 694495C20B869B9600A19631 /* Appscript.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = Appscript;
-		};
-		694495CE0B869BA400A19631 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 694495C20B869B9600A19631 /* Appscript.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Appscript;
-		};
 		69449AA40B89080600A19631 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 69449A9C0B89080600A19631 /* terminal.xcodeproj */;
@@ -84,20 +79,6 @@
 			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
 			remoteInfo = iterm;
 		};
-		69E297B30B8BD51B00A2C50F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
-			remoteInfo = pathfinder;
-		};
-		69E297CE0B8BD5FA00A2C50F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
-			remoteInfo = pathfinder;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -107,32 +88,32 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				694495D40B869BCC00A19631 /* Appscript.framework in CopyFiles */,
 				69449AD20B8909A500A19631 /* CD2PluginProtocolV1.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69449AAB0B89081F00A19631 /* CopyFiles */ = {
+		69449AAB0B89081F00A19631 /* Copy Default Plugin */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				69449AB10B89083200A19631 /* terminal.bundle in CopyFiles */,
+				69449AB10B89083200A19631 /* terminal.bundle in Copy Default Plugin */,
 			);
+			name = "Copy Default Plugin";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69449AB60B89085000A19631 /* CopyFiles */ = {
+		69449AB60B89085000A19631 /* Copy Disabled Plugins */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			comments = "Disable Plugin Copy";
 			dstPath = "Contents/PlugIns Disabled";
 			dstSubfolderSpec = 1;
 			files = (
-				69449D890B894DCB00A19631 /* iterm.bundle in CopyFiles */,
-				69E297D20B8BD61E00A2C50F /* pathfinder.bundle in CopyFiles */,
-				69449C330B892D7600A19631 /* X11_xterm.bundle in CopyFiles */,
+				69449D890B894DCB00A19631 /* iterm.bundle in Copy Disabled Plugins */,
+				69449C330B892D7600A19631 /* X11_xterm.bundle in Copy Disabled Plugins */,
 			);
+			name = "Copy Disabled Plugins";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -146,25 +127,14 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* cd to ..._Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cd to ..._Prefix.pch"; sourceTree = "<group>"; };
 		693218A90E5BDADE00CFB0C3 /* leop_app.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = leop_app.icns; sourceTree = "<group>"; };
-		694495C20B869B9600A19631 /* Appscript.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Appscript.xcodeproj; path = lib/Appscript/Appscript.xcodeproj; sourceTree = "<group>"; };
-		694496260B86A0E500A19631 /* FNApplicationGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FNApplicationGlue.h; sourceTree = "<group>"; };
-		694496270B86A0E500A19631 /* FNApplicationGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FNApplicationGlue.m; sourceTree = "<group>"; };
-		694496280B86A0E500A19631 /* FNCommandGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FNCommandGlue.h; sourceTree = "<group>"; };
-		694496290B86A0E500A19631 /* FNCommandGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FNCommandGlue.m; sourceTree = "<group>"; };
-		6944962A0B86A0E500A19631 /* FNConstantGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FNConstantGlue.h; sourceTree = "<group>"; };
-		6944962B0B86A0E500A19631 /* FNConstantGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FNConstantGlue.m; sourceTree = "<group>"; };
-		6944962C0B86A0E500A19631 /* FNGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FNGlue.h; sourceTree = "<group>"; };
-		6944962D0B86A0E500A19631 /* FNReferenceGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FNReferenceGlue.h; sourceTree = "<group>"; };
-		6944962E0B86A0E500A19631 /* FNReferenceGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FNReferenceGlue.m; sourceTree = "<group>"; };
-		6944962F0B86A0E500A19631 /* FNReferenceRendererGlue.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FNReferenceRendererGlue.h; sourceTree = "<group>"; };
-		694496300B86A0E500A19631 /* FNReferenceRendererGlue.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FNReferenceRendererGlue.m; sourceTree = "<group>"; };
 		694498870B86C47700A19631 /* app.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = app.icns; sourceTree = "<group>"; };
 		694499460B86CEFC00A19631 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		69449A9C0B89080600A19631 /* terminal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = terminal.xcodeproj; path = plugins/terminal/terminal.xcodeproj; sourceTree = "<group>"; };
 		69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CD2PluginProtocolV1.h; path = plugins/CD2PluginProtocolV1.h; sourceTree = "<group>"; };
 		69449C090B892D0B00A19631 /* X11_xterm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = X11_xterm.xcodeproj; path = plugins/X11_xterm/X11_xterm.xcodeproj; sourceTree = "<group>"; };
 		69449D830B894DBF00A19631 /* iterm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iterm.xcodeproj; path = plugins/iterm/iterm.xcodeproj; sourceTree = "<group>"; };
-		69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pathfinder.xcodeproj; path = plugins/pathfinder/pathfinder.xcodeproj; sourceTree = "<group>"; };
+		69C8A98D106E818900C4DE0D /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = /System/Library/Frameworks/ScriptingBridge.framework; sourceTree = "<absolute>"; };
+		69C8AA70106E8F5800C4DE0D /* Finder.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Finder.app; path = /System/Library/CoreServices/Finder.app; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* >cd to ....app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ">cd to ....app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -174,8 +144,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				694495D50B869BD700A19631 /* Appscript.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				69C8A98E106E818900C4DE0D /* ScriptingBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				69C8A98D106E818900C4DE0D /* ScriptingBridge.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -218,8 +189,8 @@
 		29B97314FDCFA39411CA2CEA /* cd to ... */ = {
 			isa = PBXGroup;
 			children = (
+				69C8AA70106E8F5800C4DE0D /* Finder.app */,
 				69449AD50B8909AB00A19631 /* plugin */,
-				694496250B86A0E500A19631 /* finder */,
 				694495BE0B869B3B00A19631 /* external projects */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -263,40 +234,11 @@
 		694495BE0B869B3B00A19631 /* external projects */ = {
 			isa = PBXGroup;
 			children = (
-				69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */,
 				69449A9C0B89080600A19631 /* terminal.xcodeproj */,
 				69449C090B892D0B00A19631 /* X11_xterm.xcodeproj */,
 				69449D830B894DBF00A19631 /* iterm.xcodeproj */,
-				694495C20B869B9600A19631 /* Appscript.xcodeproj */,
 			);
 			name = "external projects";
-			sourceTree = "<group>";
-		};
-		694495C30B869B9600A19631 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				694495CA0B869B9700A19631 /* Appscript.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		694496250B86A0E500A19631 /* finder */ = {
-			isa = PBXGroup;
-			children = (
-				694496260B86A0E500A19631 /* FNApplicationGlue.h */,
-				694496270B86A0E500A19631 /* FNApplicationGlue.m */,
-				694496280B86A0E500A19631 /* FNCommandGlue.h */,
-				694496290B86A0E500A19631 /* FNCommandGlue.m */,
-				6944962A0B86A0E500A19631 /* FNConstantGlue.h */,
-				6944962B0B86A0E500A19631 /* FNConstantGlue.m */,
-				6944962C0B86A0E500A19631 /* FNGlue.h */,
-				6944962D0B86A0E500A19631 /* FNReferenceGlue.h */,
-				6944962E0B86A0E500A19631 /* FNReferenceGlue.m */,
-				6944962F0B86A0E500A19631 /* FNReferenceRendererGlue.h */,
-				694496300B86A0E500A19631 /* FNReferenceRendererGlue.m */,
-			);
-			name = finder;
-			path = glue/finder;
 			sourceTree = "<group>";
 		};
 		69449A9D0B89080600A19631 /* Products */ = {
@@ -331,14 +273,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		69E297AC0B8BD51B00A2C50F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				69E297B40B8BD51B00A2C50F /* pathfinder.bundle */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,18 +284,16 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				694495D00B869BB500A19631 /* CopyFiles */,
-				69449AAB0B89081F00A19631 /* CopyFiles */,
-				69449AB60B89085000A19631 /* CopyFiles */,
-				69E816730B9122F800AD2C2C /* ShellScript */,
+				69449AAB0B89081F00A19631 /* Copy Default Plugin */,
+				69449AB60B89085000A19631 /* Copy Disabled Plugins */,
 			);
 			buildRules = (
+				69C8AA6F106E8F0C00C4DE0D /* PBXBuildRule */,
 			);
 			dependencies = (
-				694495CF0B869BA400A19631 /* PBXTargetDependency */,
 				69449AA90B89081500A19631 /* PBXTargetDependency */,
 				69449C2E0B892D5F00A19631 /* PBXTargetDependency */,
 				69449D8D0B894DD300A19631 /* PBXTargetDependency */,
-				69E297CF0B8BD5FA00A2C50F /* PBXTargetDependency */,
 			);
 			name = ">cd to ...";
 			productInstallPath = "$(HOME)/Applications";
@@ -381,16 +313,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 694495C30B869B9600A19631 /* Products */;
-					ProjectRef = 694495C20B869B9600A19631 /* Appscript.xcodeproj */;
-				},
-				{
 					ProductGroup = 69449D840B894DBF00A19631 /* Products */;
 					ProjectRef = 69449D830B894DBF00A19631 /* iterm.xcodeproj */;
-				},
-				{
-					ProductGroup = 69E297AC0B8BD51B00A2C50F /* Products */;
-					ProjectRef = 69E297AB0B8BD51B00A2C50F /* pathfinder.xcodeproj */;
 				},
 				{
 					ProductGroup = 69449A9D0B89080600A19631 /* Products */;
@@ -409,13 +333,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		694495CA0B869B9700A19631 /* Appscript.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Appscript.framework;
-			remoteRef = 694495C90B869B9700A19631 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		69449AA50B89080600A19631 /* terminal.bundle */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
@@ -437,13 +354,6 @@
 			remoteRef = 69449D870B894DBF00A19631 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		69E297B40B8BD51B00A2C50F /* pathfinder.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = pathfinder.bundle;
-			remoteRef = 69E297B30B8BD51B00A2C50F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -455,49 +365,25 @@
 				694498880B86C47700A19631 /* app.icns in Resources */,
 				694499470B86CEFC00A19631 /* LICENSE in Resources */,
 				693218AA0E5BDADE00CFB0C3 /* leop_app.icns in Resources */,
+				69C8AA71106E8F5800C4DE0D /* Finder.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		69E816730B9122F800AD2C2C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SOURCE_ROOT/versioning/version.sh\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C8AA89106EE02F00C4DE0D /* Finder.app in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				694496320B86A0E500A19631 /* FNApplicationGlue.m in Sources */,
-				694496340B86A0E500A19631 /* FNCommandGlue.m in Sources */,
-				694496360B86A0E500A19631 /* FNConstantGlue.m in Sources */,
-				694496390B86A0E500A19631 /* FNReferenceGlue.m in Sources */,
-				6944963B0B86A0E500A19631 /* FNReferenceRendererGlue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		694495CF0B869BA400A19631 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Appscript;
-			targetProxy = 694495CE0B869BA400A19631 /* PBXContainerItemProxy */;
-		};
 		69449AA90B89081500A19631 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = terminal;
@@ -512,11 +398,6 @@
 			isa = PBXTargetDependency;
 			name = iterm;
 			targetProxy = 69449D8C0B894DD300A19631 /* PBXContainerItemProxy */;
-		};
-		69E297CF0B8BD5FA00A2C50F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = pathfinder;
-			targetProxy = 69E297CE0B8BD5FA00A2C50F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
