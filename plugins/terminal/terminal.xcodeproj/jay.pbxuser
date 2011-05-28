@@ -61,9 +61,9 @@
 			PBXWorkspaceStateSaveDate = 275678542;
 		};
 		perUserProjectItems = {
-			69C8AB02106EEE1800C4DE0D /* PBXTextBookmark */ = 69C8AB02106EEE1800C4DE0D /* PBXTextBookmark */;
-			69C8AB04106EEE1800C4DE0D /* PBXTextBookmark */ = 69C8AB04106EEE1800C4DE0D /* PBXTextBookmark */;
-			69C8AB05106EEE1800C4DE0D /* PBXTextBookmark */ = 69C8AB05106EEE1800C4DE0D /* PBXTextBookmark */;
+			69C8AB02106EEE1800C4DE0D = 69C8AB02106EEE1800C4DE0D /* PBXTextBookmark */;
+			69C8AB04106EEE1800C4DE0D = 69C8AB04106EEE1800C4DE0D /* PBXTextBookmark */;
+			69C8AB05106EEE1800C4DE0D = 69C8AB05106EEE1800C4DE0D /* PBXTextBookmark */;
 		};
 		sourceControlManager = 69449A600B8906BA00A19631 /* Source Control */;
 		userBuildSettings = {
@@ -148,6 +148,7 @@
 	};
 	69C8AB03106EEE1800C4DE0D /* Terminal.h */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
 		name = Terminal.h;
 		path = /Users/jay/Documents/build/terminal.build/Debug/terminal.build/DerivedSources/Terminal.h;
 		sourceTree = "<absolute>";

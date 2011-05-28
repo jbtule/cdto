@@ -163,7 +163,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "terminal" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* terminal */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -255,7 +259,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Debug;
 		};
@@ -267,7 +271,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Release;
 		};
