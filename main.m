@@ -55,7 +55,7 @@ NSArray* loadPlugins(){
 	NSMutableArray* pluginObjectArrays = [NSMutableArray array];
 	NSEnumerator *enumerator = [bundlePaths objectEnumerator];
 	NSString* path;
-	while (path = (NSString*)[enumerator nextObject]) {
+	while ((path = (NSString*)[enumerator nextObject])) {
 		NSBundle* bundle =[NSBundle bundleWithPath:path];
 		Class pClass =[bundle principalClass];
 		if([pClass conformsToProtocol:@protocol(CD2PluginProtocolV1)] &&  [pClass isKindOfClass:[NSObject class]]){
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 	
 	NSEnumerator *enumerator = [plugins objectEnumerator];
 	id <CD2PluginProtocolV1> plugin;
-	while (plugin = (id <CD2PluginProtocolV1>)[enumerator nextObject]) {
+	while ((plugin = (id <CD2PluginProtocolV1>)[enumerator nextObject])) {
 		[plugin openTermWindowForPath:path];
 	}
 	

@@ -14,48 +14,18 @@
 
 -(BOOL)openTermWindowForPath:(NSString*)aPath{
 	@try{
-		//fix quoting issue
-		NSMutableString* fixQuotedPath = [[aPath mutableCopy]autorelease];
-		[fixQuotedPath replaceOccurrencesOfString:@"'" withString:@"\\'" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
-	/*	[fixQuotedPath replaceOccurrencesOfString:@"\"" withString:@"\\\"" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
-		[fixQuotedPath replaceOccurrencesOfString:@" " withString:@"\\ " options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
-		[fixQuotedPath replaceOccurrencesOfString:@"'" withString:@"\\'" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
-		[fixQuotedPath replaceOccurrencesOfString:@"`" withString:@"\\`" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
-		[fixQuotedPath replaceOccurrencesOfString:@")" withString:@"\\)" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
-		[fixQuotedPath replaceOccurrencesOfString:@"(" withString:@"\\(" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
-*/
 
-		NSString* tCommandSequence =@"printf %%b '\\033c'; cd $'%@'";
+
 	
 		TerminalApplication* terminal = [SBApplication applicationWithBundleIdentifier:@"com.apple.Terminal"];
 
-		[terminal activate];
+        	
+        [terminal activate];
+       
+	
 		
-		bool isDefaultWindow =NO;
-		if([[[terminal windows] get] count] ==1 ){
-			TerminalWindow* firstTermWindow =[[terminal windows] objectAtIndex:0];
-			TerminalTab* firstTab =[[firstTermWindow tabs] objectAtIndex:0];
-
-			if(!firstTab.busy){
-				NSString* windowContents = firstTab.contents;
-				int originalLength = [windowContents length];
-				
-				NSMutableString *mutableContents = [[windowContents mutableCopy] autorelease];
-				NSMutableString *mutableContents2 = [[windowContents mutableCopy] autorelease];
-				[mutableContents replaceOccurrencesOfString:@"$" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[mutableContents length])];
-				[mutableContents2 replaceOccurrencesOfString:@"Last login" withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[mutableContents2 length])];
-				
-				if([mutableContents length]+1 == originalLength && [mutableContents2 length] < originalLength ){
-					isDefaultWindow =YES;
-					[terminal doScript:[NSString stringWithFormat:tCommandSequence,fixQuotedPath,nil] in:firstTermWindow];
-					
-				}
-			}
-		}
 		
-		if(!isDefaultWindow){
-			[terminal doScript:[NSString stringWithFormat:tCommandSequence,fixQuotedPath,nil] in:nil];
-		}
+		[terminal open:[NSArray arrayWithObject:aPath]];
 		return YES;
 	}@catch(id ue) {
 		

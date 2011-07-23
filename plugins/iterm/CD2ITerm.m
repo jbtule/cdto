@@ -14,11 +14,11 @@
 	@try{
 		NSMutableString* fixQuotedPath = [[aPath mutableCopy]autorelease];
 		
-		NSString* tCommandSequence =@"clear; cd $'%@'";
+		NSString* tCommandSequence =@"clear; cd '%@'";
 		
-		[fixQuotedPath replaceOccurrencesOfString:@"'" withString:@"\\'" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
+		[fixQuotedPath replaceOccurrencesOfString:@"'" withString:@"\"'\"" options:NSCaseInsensitiveSearch range:NSMakeRange(0,[fixQuotedPath length])];
 
-		iTermITermApplication* iterm = [SBApplication applicationWithBundleIdentifier:@"net.sourceforge.iTerm"];
+		iTermITermApplication* iterm = [SBApplication applicationWithBundleIdentifier:@"com.googlecode.iTerm2"];
 		[iterm activate];
 
 		bool isDefaultWindow =NO;
@@ -40,7 +40,7 @@
 			}
 		
 		if(!isDefaultWindow){
-			terminal =[[[iterm classForScriptingClass:@"terminal"] alloc] init];
+			terminal =[[[[iterm classForScriptingClass:@"terminal"] alloc] init]autorelease];
 			[iterm.terminals addObject: terminal];
 			[terminal launchSession:@"Default Session"] ;
 		}
