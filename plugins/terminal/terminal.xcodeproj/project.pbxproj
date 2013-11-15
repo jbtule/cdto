@@ -242,14 +242,35 @@
 			};
 			name = Release;
 		};
+		69F8B17F1836008300EC6853 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: James Tuley (VURRGRYW45)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = terminal;
+			};
+			name = Debug;
+		};
+		69F8B1801836008300EC6853 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: James Tuley (VURRGRYW45)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = terminal;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "terminal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DEB913B08733D840010E9CD /* Debug */,
-				1DEB913C08733D840010E9CD /* Release */,
+				69F8B17F1836008300EC6853 /* Debug */,
+				69F8B1801836008300EC6853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
