@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		693218AA0E5BDADE00CFB0C3 /* leop_app.icns in Resources */ = {isa = PBXBuildFile; fileRef = 693218A90E5BDADE00CFB0C3 /* leop_app.icns */; };
-		694498880B86C47700A19631 /* app.icns in Resources */ = {isa = PBXBuildFile; fileRef = 694498870B86C47700A19631 /* app.icns */; };
 		694499470B86CEFC00A19631 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 694499460B86CEFC00A19631 /* LICENSE */; };
 		69449AB10B89083200A19631 /* terminal.bundle in Copy Default Plugin */ = {isa = PBXBuildFile; fileRef = 69449AA50B89080600A19631 /* terminal.bundle */; };
 		69449AD20B8909A500A19631 /* CD2PluginProtocolV1.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */; };
@@ -127,8 +125,6 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* cd to ..._Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cd to ..._Prefix.pch"; sourceTree = "<group>"; };
-		693218A90E5BDADE00CFB0C3 /* leop_app.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = leop_app.icns; sourceTree = "<group>"; };
-		694498870B86C47700A19631 /* app.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = app.icns; sourceTree = "<group>"; };
 		694499460B86CEFC00A19631 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		69449A9C0B89080600A19631 /* terminal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = terminal.xcodeproj; path = plugins/terminal/terminal.xcodeproj; sourceTree = "<group>"; };
 		69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CD2PluginProtocolV1.h; path = plugins/CD2PluginProtocolV1.h; sourceTree = "<group>"; };
@@ -216,9 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				6947E8C613DA6362008C982D /* lion.icns */,
-				693218A90E5BDADE00CFB0C3 /* leop_app.icns */,
 				694499460B86CEFC00A19631 /* LICENSE */,
-				694498870B86C47700A19631 /* app.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
@@ -377,9 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				694498880B86C47700A19631 /* app.icns in Resources */,
 				694499470B86CEFC00A19631 /* LICENSE in Resources */,
-				693218AA0E5BDADE00CFB0C3 /* leop_app.icns in Resources */,
 				69C8AA71106E8F5800C4DE0D /* Finder.app in Resources */,
 				6947E8C713DA6362008C982D /* lion.icns in Resources */,
 			);
