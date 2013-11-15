@@ -1,6 +1,8 @@
->cd to...
+##cd to...
+<img src="https://raw.github.com/jbtule/cdto/master/graphics/lion.png" height="128px" width="128px" />
+
 By Jay Tuley
-http://code.google.com/p/cdto
+https://github.com/jbtule/cdto
 
 ###Usage:
 
