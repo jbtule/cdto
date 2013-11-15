@@ -14,6 +14,10 @@ To use with iTerm or X11/xterm, using the finder contextual menu "show package c
 
 
 ###Changes:
+Version 2.6
+ * Fixed bug where get info window interferes
+ * works on selected folder again
+ * iTerm 2 plugin update
 
 Version 2.5
  * Lion Version
