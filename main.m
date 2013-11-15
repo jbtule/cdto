@@ -13,31 +13,32 @@
 NSString* getPathToFrontFinderWindow(){
 	
 	FinderApplication* finder = [SBApplication applicationWithBundleIdentifier:@"com.apple.Finder"];
-			
-	
-	
-	FinderFinderWindow* frontWindow =[[finder windows]  objectAtIndex:0];
-	
-	FinderItem* target =  [frontWindow.properties objectForKey:@"target"] ;
-	 
+    
+	FinderItem *target = [(NSArray*)[[finder selection]get] firstObject];
+    if (target == nil){
+        target = [[[[finder FinderWindows] firstObject] target] get];
+    }
 	
 	NSURL* url =[NSURL URLWithString:target.URL];
-	
-	FSRef fsRef;
-	Boolean isDir =NO;
-	Boolean wasAliased;
-	if (CFURLGetFSRef((CFURLRef)url, &fsRef)){
-		if (FSResolveAliasFile (&fsRef, true /*resolveAliasChains*/,
-			&isDir, &wasAliased) == noErr && wasAliased){
-			NSURL* newURL = (NSURL*)CFURLCreateFromFSRef(NULL, &fsRef);
-			[newURL autorelease];
-			if(newURL!=nil)
-				url = newURL;
-		}
-	}
+	NSError* error;
+	NSData* bookmark = [NSURL bookmarkDataWithContentsOfURL:url error:nil];
+    NSURL* fullUrl = [NSURL URLByResolvingBookmarkData:bookmark
+                                        options:NSURLBookmarkResolutionWithoutUI
+                                  relativeToURL:nil
+                            bookmarkDataIsStale:nil
+                                          error:&error];
+    if(fullUrl != nil){
+        url = fullUrl;
+    }
+ 
 
-	NSString* path = [url path];
+	NSString* path = [[url path] stringByExpandingTildeInPath];
 
+    BOOL isDir = NO;
+   [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir];
+
+    
+    
 	if(!isDir){
 		path = [path stringByDeletingLastPathComponent];
 	}
