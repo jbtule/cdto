@@ -208,7 +208,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = X11_xterm_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				INSTALL_PATH = /unsigned/plugins;
 				PRODUCT_NAME = X11_xterm;
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = YES;
@@ -226,7 +226,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = X11_xterm_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				INSTALL_PATH = /unsigned/plugins;
 				PRODUCT_NAME = X11_xterm;
 				WRAPPER_EXTENSION = bundle;
 			};

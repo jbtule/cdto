@@ -227,6 +227,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /unsigned/plugins;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -238,6 +239,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /unsigned/plugins;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -258,7 +260,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Developer ID Application: James Tuley (VURRGRYW45)";
 				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				PRODUCT_NAME = terminal;
 			};
 			name = Release;

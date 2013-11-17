@@ -13,16 +13,20 @@
 
 -(BOOL)openTermWindowForPath:(NSString*)aPath{
 	@try{
-		[[NSWorkspace sharedWorkspace] launchApplication:@"X11.app"];
+		if(![[NSWorkspace sharedWorkspace] launchApplication:@"X11.app"]){
+            [[NSWorkspace sharedWorkspace] launchApplication:@"XQuartz.app"];
+        }
 		NSTask* task =[[NSTask alloc]init];
 		[task setCurrentDirectoryPath:aPath];
 		NSMutableDictionary* enviornment =[[[[NSProcessInfo processInfo] environment] mutableCopy]autorelease];
-		
-		[enviornment setObject:@":0.0" forKey:@"DISPLAY"];
-		
+				
 		[task setEnvironment:enviornment];
 		
-		[task setLaunchPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"LaunchXTerm" ofType:@"sh"]];
+        NSString* path = @"/usr/X11R6/bin/xterm";
+        if(![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:NULL]){
+            path = @"/opt/X11/bin/xterm";
+        }
+		[task setLaunchPath:path];
 
 		[task setStandardOutput:[NSFileHandle fileHandleWithStandardOutput]];	
 

@@ -6,16 +6,43 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		69968DB2183859F400FB4A35 /* cd to all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 69968DB5183859F400FB4A35 /* Build configuration list for PBXAggregateTarget "cd to all" */;
+			buildPhases = (
+				69968DBE18385A2C00FB4A35 /* Terminal */,
+				69968DC018385B3300FB4A35 /* Terminal Plugin */,
+				69968DC218385C1A00FB4A35 /* iTerm */,
+				69968DC418385C5700FB4A35 /* iTerm Plugin */,
+				69968DC618385CCB00FB4A35 /* X11 xterm */,
+				69968DC818385D2B00FB4A35 /* X11 xterm Plugin */,
+				69E2DFCC18386A4900B7DEA3 /* Sign apps */,
+			);
+			dependencies = (
+				69E2DFD618387DE700B7DEA3 /* PBXTargetDependency */,
+				69968DB918385A0500FB4A35 /* PBXTargetDependency */,
+				69968DBB18385A0500FB4A35 /* PBXTargetDependency */,
+				69968DBD18385A0500FB4A35 /* PBXTargetDependency */,
+			);
+			name = "cd to all";
+			productName = "cd to all";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		69449AB10B89083200A19631 /* terminal.bundle in Copy Default Plugin */ = {isa = PBXBuildFile; fileRef = 69449AA50B89080600A19631 /* terminal.bundle */; };
 		69449AD20B8909A500A19631 /* CD2PluginProtocolV1.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 69449AD10B8909A400A19631 /* CD2PluginProtocolV1.h */; };
-		69449C330B892D7600A19631 /* X11_xterm.bundle in Copy Disabled Plugins */ = {isa = PBXBuildFile; fileRef = 69449C110B892D0B00A19631 /* X11_xterm.bundle */; };
-		69449D890B894DCB00A19631 /* iterm.bundle in Copy Disabled Plugins */ = {isa = PBXBuildFile; fileRef = 69449D880B894DBF00A19631 /* iterm.bundle */; };
 		6947E8C713DA6362008C982D /* lion.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6947E8C613DA6362008C982D /* lion.icns */; };
 		6963D7FD1835ED290039592E /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 6963D7FC1835ED290039592E /* LICENSE.md */; };
+		69968DC118385B4C00FB4A35 /* terminal.bundle in Terminal Plugin */ = {isa = PBXBuildFile; fileRef = 69449AA50B89080600A19631 /* terminal.bundle */; };
+		69968DC318385C2C00FB4A35 /* cd to.app in iTerm */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* cd to.app */; };
+		69968DC518385C8800FB4A35 /* iterm.bundle in iTerm Plugin */ = {isa = PBXBuildFile; fileRef = 69449D880B894DBF00A19631 /* iterm.bundle */; };
+		69968DC718385CFC00FB4A35 /* cd to.app in X11 xterm */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* cd to.app */; };
+		69968DC918385D4A00FB4A35 /* X11_xterm.bundle in X11 xterm Plugin */ = {isa = PBXBuildFile; fileRef = 69449C110B892D0B00A19631 /* X11_xterm.bundle */; };
 		69C8A98E106E818900C4DE0D /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C8A98D106E818900C4DE0D /* ScriptingBridge.framework */; };
 		69C8AA71106E8F5800C4DE0D /* Finder.app in Resources */ = {isa = PBXBuildFile; fileRef = 69C8AA70106E8F5800C4DE0D /* Finder.app */; };
 		69C8AA89106EE02F00C4DE0D /* Finder.app in Sources */ = {isa = PBXBuildFile; fileRef = 69C8AA70106E8F5800C4DE0D /* Finder.app */; };
+		69E2DFD718387F4500B7DEA3 /* cd to.app in Terminal */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* cd to.app */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -43,25 +70,11 @@
 			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
 			remoteInfo = terminal;
 		};
-		69449AA80B89081500A19631 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69449A9C0B89080600A19631 /* terminal.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
-			remoteInfo = terminal;
-		};
 		69449C100B892D0B00A19631 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 69449C090B892D0B00A19631 /* X11_xterm.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
-			remoteInfo = X11_xterm;
-		};
-		69449C2D0B892D5F00A19631 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69449C090B892D0B00A19631 /* X11_xterm.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
 			remoteInfo = X11_xterm;
 		};
 		69449D870B894DBF00A19631 /* PBXContainerItemProxy */ = {
@@ -71,12 +84,33 @@
 			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
 			remoteInfo = iterm;
 		};
-		69449D8C0B894DD300A19631 /* PBXContainerItemProxy */ = {
+		69968DB818385A0500FB4A35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69449A9C0B89080600A19631 /* terminal.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
+			remoteInfo = terminal;
+		};
+		69968DBA18385A0500FB4A35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69449C090B892D0B00A19631 /* X11_xterm.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
+			remoteInfo = X11_xterm;
+		};
+		69968DBC18385A0500FB4A35 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 69449D830B894DBF00A19631 /* iterm.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 8D5B49AC048680CD000E48DA;
 			remoteInfo = iterm;
+		};
+		69E2DFD518387DE700B7DEA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = ">cd to ...";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -91,28 +125,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69449AAB0B89081F00A19631 /* Copy Default Plugin */ = {
+		69968DBE18385A2C00FB4A35 /* Terminal */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
+			buildActionMask = 12;
+			dstPath = terminal;
+			dstSubfolderSpec = 16;
 			files = (
-				69449AB10B89083200A19631 /* terminal.bundle in Copy Default Plugin */,
+				69E2DFD718387F4500B7DEA3 /* cd to.app in Terminal */,
 			);
-			name = "Copy Default Plugin";
+			name = Terminal;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69449AB60B89085000A19631 /* Copy Disabled Plugins */ = {
+		69968DC018385B3300FB4A35 /* Terminal Plugin */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			comments = "Disable Plugin Copy";
-			dstPath = "Contents/PlugIns Disabled";
-			dstSubfolderSpec = 1;
+			dstPath = "terminal/cd to.app/Contents/Plugins";
+			dstSubfolderSpec = 16;
 			files = (
-				69449D890B894DCB00A19631 /* iterm.bundle in Copy Disabled Plugins */,
-				69449C330B892D7600A19631 /* X11_xterm.bundle in Copy Disabled Plugins */,
+				69968DC118385B4C00FB4A35 /* terminal.bundle in Terminal Plugin */,
 			);
-			name = "Copy Disabled Plugins";
+			name = "Terminal Plugin";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69968DC218385C1A00FB4A35 /* iTerm */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = iterm;
+			dstSubfolderSpec = 16;
+			files = (
+				69968DC318385C2C00FB4A35 /* cd to.app in iTerm */,
+			);
+			name = iTerm;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69968DC418385C5700FB4A35 /* iTerm Plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "iterm/cd to.app/Contents/Plugins";
+			dstSubfolderSpec = 16;
+			files = (
+				69968DC518385C8800FB4A35 /* iterm.bundle in iTerm Plugin */,
+			);
+			name = "iTerm Plugin";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69968DC618385CCB00FB4A35 /* X11 xterm */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = x11_xterm;
+			dstSubfolderSpec = 16;
+			files = (
+				69968DC718385CFC00FB4A35 /* cd to.app in X11 xterm */,
+			);
+			name = "X11 xterm";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69968DC818385D2B00FB4A35 /* X11 xterm Plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "x11_xterm/cd to.app/Contents/Plugins";
+			dstSubfolderSpec = 16;
+			files = (
+				69968DC918385D4A00FB4A35 /* X11_xterm.bundle in X11 xterm Plugin */,
+			);
+			name = "X11 xterm Plugin";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -281,16 +357,11 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				694495D00B869BB500A19631 /* CopyFiles */,
-				69449AAB0B89081F00A19631 /* Copy Default Plugin */,
-				69449AB60B89085000A19631 /* Copy Disabled Plugins */,
 			);
 			buildRules = (
 				69C8AA6F106E8F0C00C4DE0D /* PBXBuildRule */,
 			);
 			dependencies = (
-				69449AA90B89081500A19631 /* PBXTargetDependency */,
-				69449C2E0B892D5F00A19631 /* PBXTargetDependency */,
-				69449D8D0B894DD300A19631 /* PBXTargetDependency */,
 			);
 			name = ">cd to ...";
 			productInstallPath = "$(HOME)/Applications";
@@ -337,6 +408,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* >cd to ... */,
+				69968DB2183859F400FB4A35 /* cd to all */,
 			);
 		};
 /* End PBXProject section */
@@ -379,6 +451,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		69E2DFCC18386A4900B7DEA3 /* Sign apps */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/cd to.app",
+				"$(BUILT_PRODUCTS_DIR)/terminal.bundle",
+				"$(BUILT_PRODUCTS_DIR)/iterm.bundle",
+				"$(BUILT_PRODUCTS_DIR)/X11_xterm.bundle",
+			);
+			name = "Sign apps";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/terminal/cd to.app/",
+				"$(BUILT_PRODUCTS_DIR)/iterm/cd to.app/",
+				"$(BUILT_PRODUCTS_DIR)/x11_xterm/cd to.app/",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"sign $BUILT_PRODUCTS_DIR/terminal/cd to.app\"\necho \"sign $BUILT_PRODUCTS_DIR/iterm/cd to.app\"\necho \"sign $BUILT_PRODUCTS_DIR/x11_xterm/cd to.app\"\n\n\ncodesign -s \"Developer ID Application: James Tuley (VURRGRYW45)\" \"$BUILT_PRODUCTS_DIR/terminal/cd to.app\" \"$BUILT_PRODUCTS_DIR/iterm/cd to.app\" \"$BUILT_PRODUCTS_DIR/x11_xterm/cd to.app\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -392,20 +489,25 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		69449AA90B89081500A19631 /* PBXTargetDependency */ = {
+		69968DB918385A0500FB4A35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = terminal;
-			targetProxy = 69449AA80B89081500A19631 /* PBXContainerItemProxy */;
+			targetProxy = 69968DB818385A0500FB4A35 /* PBXContainerItemProxy */;
 		};
-		69449C2E0B892D5F00A19631 /* PBXTargetDependency */ = {
+		69968DBB18385A0500FB4A35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = X11_xterm;
-			targetProxy = 69449C2D0B892D5F00A19631 /* PBXContainerItemProxy */;
+			targetProxy = 69968DBA18385A0500FB4A35 /* PBXContainerItemProxy */;
 		};
-		69449D8D0B894DD300A19631 /* PBXTargetDependency */ = {
+		69968DBD18385A0500FB4A35 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iterm;
-			targetProxy = 69449D8C0B894DD300A19631 /* PBXContainerItemProxy */;
+			targetProxy = 69968DBC18385A0500FB4A35 /* PBXContainerItemProxy */;
+		};
+		69E2DFD618387DE700B7DEA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* >cd to ... */;
+			targetProxy = 69E2DFD518387DE700B7DEA3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -421,19 +523,37 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		69968DB3183859F400FB4A35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				INSTALL_PATH = /;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		69968DB4183859F400FB4A35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				INSTALL_PATH = /;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: James Tuley (VURRGRYW45)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: James Tuley (VURRGRYW45)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				INSTALL_PATH = /unsigned;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_NAME = "cd to";
@@ -445,14 +565,14 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: James Tuley (VURRGRYW45)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: James Tuley (VURRGRYW45)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				INSTALL_PATH = /unsigned;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_NAME = "cd to";
@@ -466,7 +586,8 @@
 			buildSettings = {
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -477,7 +598,8 @@
 			buildSettings = {
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -485,6 +607,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		69968DB5183859F400FB4A35 /* Build configuration list for PBXAggregateTarget "cd to all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69968DB3183859F400FB4A35 /* Debug */,
+				69968DB4183859F400FB4A35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget ">cd to ..." */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
