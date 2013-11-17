@@ -1,7 +1,11 @@
 ##cd to...
 <img src="https://raw.github.com/jbtule/cdto/master/graphics/lion.png" height="128px" width="128px" />
 
-Finder Toolbar app to open the current directory in the Terminal (or iTerm, X11) 
+Finder Toolbar app to open the current directory in the Terminal (or iTerm, X11)
+
+ * It's written in objective-c, and uses the scripting bridge so it's *fast*.
+ * It's also shell agnostic. Works equally well in `bash` or `fish` or `tsch`.
+
 By Jay Tuley
 https://github.com/jbtule/cdto
 
