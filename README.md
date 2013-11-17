@@ -10,7 +10,7 @@ Download [Latest cdto.zip](https://github.com/jbtule/cdto/releases/latest)
 
 To install "cd to.app" copy it to your Applications folder, and then from the applications folder drag it into the Finder toolbar (10.9 Mavericks requires ⌘ + ⌥) 
 
-To use with iTerm or X11/xterm, using the finder contextual menu "show package contents"  and exchange the plugins in the Plugin/Plugin Disabled folders respectively.  Next time you run  "cd to ..." it should open with the correct application.
+For old versions to use with iTerm or X11/xterm, using the finder contextual menu "show package contents"  and exchange the plugins in the Plugin/Plugin Disabled folders respectively.  Next time you run  "cd to ..." it should open with the correct application.
 
 
 ###Changes:
