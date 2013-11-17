@@ -4,7 +4,7 @@
 Finder Toolbar app to open the current directory in the Terminal (or iTerm, X11)
 
  * It's written in objective-c, and uses the scripting bridge so it's *fast*.
- * It's also shell agnostic. Works equally well in `bash` or `fish` or `tsch`.
+ * It's also shell agnostic. Works equally well when your shell is `bash` or `fish` or `tsch`.
 
 By Jay Tuley
 https://github.com/jbtule/cdto
@@ -50,7 +50,14 @@ Version 2.1
  * Default plugins for iTerm & X11/xterm
  * Terminal plugin will try to avoid opening two windows on terminal.app's launch
 
-Version 2.0
+Version 2.0 (2005)
  * Ported to objective-c using appscript, boosting launch & execution speed
  * properly resolves aliases
  * no longer shows icon in dock on launch
+ 
+Version 1.0 (2003)
+  * targeted Panther OS X 10.3
+  * was applescript
+
+Pre 1.0 (2001)
+   Really old applescript
