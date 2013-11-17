@@ -1,6 +1,7 @@
 ##cd to...
 <img src="https://raw.github.com/jbtule/cdto/master/graphics/lion.png" height="128px" width="128px" />
 
+Finder Toolbar app to open the current directory in the Terminal (or iTerm, X11) 
 By Jay Tuley
 https://github.com/jbtule/cdto
 
@@ -9,6 +10,8 @@ https://github.com/jbtule/cdto
 Download [Latest cdto.zip](https://github.com/jbtule/cdto/releases/latest)
 
 To install "cd to.app" copy it to your Applications folder, and then from the applications folder drag it into the Finder toolbar (10.9 Mavericks requires ⌘ + ⌥) 
+
+To use, just click on the new button and instanly opens a new terminal window.
 
 For old versions to use with iTerm or X11/xterm, using the finder contextual menu "show package contents"  and exchange the plugins in the Plugin/Plugin Disabled folders respectively.  Next time you run  "cd to ..." it should open with the correct application.
 
