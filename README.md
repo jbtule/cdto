@@ -1,5 +1,5 @@
 ##cd to...
-<img src="https://raw.github.com/jbtule/cdto/master/graphics/lion.png" height="128px" width="128px" />
+<img src="https://raw.github.com/jbtule/cdto/master/graphics/elcapitan.png" height="128px" width="128px" />
 
 Finder Toolbar app to open the current directory in the Terminal (or iTerm, X11)
 
@@ -13,7 +13,7 @@ https://github.com/jbtule/cdto
 
 Download [Latest cdto.zip](https://github.com/jbtule/cdto/releases/latest)
 
-To install "cd to.app" copy it from the appropriate sub-folder (iterm//x11_xterm/unsigned per your choice) to your Applications folder, and then from the applications folder drag it into the Finder toolbar (10.9 Mavericks requires ⌘ + ⌥) 
+To install "cd to.app" copy it from the appropriate sub-folder (iterm//x11_xterm/unsigned per your choice) to your Applications folder, and then from the applications folder drag it into the Finder toolbar (10.9 Mavericks requires ⌘ + ⌥)
 
 To use, just click on the new button and instanly opens a new terminal window.
 
@@ -54,7 +54,7 @@ Version 2.0 (2005)
  * Ported to objective-c using appscript, boosting launch & execution speed
  * properly resolves aliases
  * no longer shows icon in dock on launch
- 
+
 Version 1.0 (2003)
   * targeted Panther OS X 10.3
   * was applescript
