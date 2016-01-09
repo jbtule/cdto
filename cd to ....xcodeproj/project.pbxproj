@@ -139,7 +139,7 @@
 		69968DC018385B3300FB4A35 /* Terminal Plugin */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "terminal/cd to.app/Contents/Plugins";
+			dstPath = "terminal/cd to.app/Contents/PlugIns";
 			dstSubfolderSpec = 16;
 			files = (
 				69968DC118385B4C00FB4A35 /* terminal.bundle in Terminal Plugin */,
@@ -161,7 +161,7 @@
 		69968DC418385C5700FB4A35 /* iTerm Plugin */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "iterm/cd to.app/Contents/Plugins";
+			dstPath = "iterm/cd to.app/Contents/PlugIns";
 			dstSubfolderSpec = 16;
 			files = (
 				69968DC518385C8800FB4A35 /* iterm.bundle in iTerm Plugin */,
@@ -183,7 +183,7 @@
 		69968DC818385D2B00FB4A35 /* X11 xterm Plugin */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "x11_xterm/cd to.app/Contents/Plugins";
+			dstPath = "x11_xterm/cd to.app/Contents/PlugIns";
 			dstSubfolderSpec = 16;
 			files = (
 				69968DC918385D4A00FB4A35 /* X11_xterm.bundle in X11 xterm Plugin */,
