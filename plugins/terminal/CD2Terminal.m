@@ -12,27 +12,21 @@
 
 @implementation CD2Terminal
 
--(BOOL)openTermWindowForPath:(NSString*)aPath{
-	@try{
+- (BOOL)openTermWindowForPath:(NSString *) {
+  @try {
+    TerminalApplication* terminal = [SBApplication applicationWithBundleIdentifier:@"com.apple.Terminal"];
 
+    [terminal activate];
 
-	
-		TerminalApplication* terminal = [SBApplication applicationWithBundleIdentifier:@"com.apple.Terminal"];
-
-        	
-        [terminal activate];
-       
-	
-		
-		
-		[terminal open:[NSArray arrayWithObject:aPath]];
-		return YES;
-	}@catch(id ue) {
-		
-		return NO;
-	}@finally{
-		return NO;
-	}
+    [terminal open:[NSArray arrayWithObject:aPath]];
+    return YES;
+  }
+  @catch (id ue) {
+    return NO;
+  }
+  @finally {
+    return NO;
+  }
 }
 
 @end

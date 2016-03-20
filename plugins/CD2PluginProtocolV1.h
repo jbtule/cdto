@@ -10,6 +10,6 @@
 
 @protocol CD2PluginProtocolV1
 
--(BOOL)openTermWindowForPath:(NSString*)aPath;
+- (BOOL)openTermWindowForPath:(NSString *)aPath;
 
 @end

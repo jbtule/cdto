@@ -11,34 +11,32 @@
 
 @implementation CD2X11XTermPlugin
 
--(BOOL)openTermWindowForPath:(NSString*)aPath{
-	@try{
-		if(![[NSWorkspace sharedWorkspace] launchApplication:@"X11.app"]){
-            [[NSWorkspace sharedWorkspace] launchApplication:@"XQuartz.app"];
-        }
-		NSTask* task =[[NSTask alloc]init];
-		[task setCurrentDirectoryPath:aPath];
-		NSMutableDictionary* enviornment =[[[[NSProcessInfo processInfo] environment] mutableCopy]autorelease];
-				
-		[task setEnvironment:enviornment];
-		
-        NSString* path = @"/usr/X11R6/bin/xterm";
-        if(![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:NULL]){
-            path = @"/opt/X11/bin/xterm";
-        }
-		[task setLaunchPath:path];
+- (BOOL)openTermWindowForPath:(NSString *)aPath {
+  @try {
+    if (![[NSWorkspace sharedWorkspace] launchApplication:@"X11.app"]) {
+      [[NSWorkspace sharedWorkspace] launchApplication:@"XQuartz.app"];
+    }
+    NSTask* task =[[NSTask alloc]init];
+    [task setCurrentDirectoryPath:aPath];
+    NSMutableDictionary* enviornment =[[[[NSProcessInfo processInfo] environment] mutableCopy]autorelease];
 
-		[task setStandardOutput:[NSFileHandle fileHandleWithStandardOutput]];	
+    [task setEnvironment:enviornment];
 
-		[task setStandardError:[NSFileHandle fileHandleWithStandardOutput]];	
-		[task launch];
-		
-	}
-	@catch(id ex){
-		return NO;
-	}
+    NSString* path = @"/usr/X11R6/bin/xterm";
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:NULL]) {
+      path = @"/opt/X11/bin/xterm";
+    }
+    [task setLaunchPath:path];
 
-	return YES;
+    [task setStandardOutput:[NSFileHandle fileHandleWithStandardOutput]];
+
+    [task setStandardError:[NSFileHandle fileHandleWithStandardOutput]];
+    [task launch];
+  }
+  @catch (id ex) {
+    return NO;
+  }
+  return YES;
 }
 
 @end

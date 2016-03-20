@@ -9,16 +9,15 @@
 #import "CD2ITerm.h"
 
 @implementation CD2ITerm
--(BOOL)openTermWindowForPath:(NSString*)aPath{
-	@try{
-        
-        [[NSWorkspace sharedWorkspace] openFile:[aPath stringByExpandingTildeInPath] withApplication:@"iTerm.app"];
 
-
-	}@catch(id test){
-		return NO;
-	}
-	return YES;
+- (BOOL)openTermWindowForPath:(NSString *)aPath {
+  @try {
+    [[NSWorkspace sharedWorkspace] openFile:[aPath stringByExpandingTildeInPath] withApplication:@"iTerm.app"];
+  }
+  @catch (id test) {
+    return NO;
+  }
+  return YES;
 }
 
 @end
