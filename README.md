@@ -60,4 +60,4 @@ Version 1.0 (2003)
  * Was AppleScript
 
 Pre 1.0 (2001)
-   Really old AppleScript
+ * Really old AppleScript
