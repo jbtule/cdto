@@ -1,35 +1,35 @@
-##cd to...
+## `cd to ...`
 <img src="https://raw.github.com/jbtule/cdto/master/graphics/lion.png" height="128px" width="128px" />
 
 Finder Toolbar app to open the current directory in the Terminal (or iTerm, X11)
 
- * It's written in objective-c, and uses the scripting bridge so it's *fast*.
+ * It's written in Objective-c, and uses the scripting bridge so it's *fast*.
  * It's also shell agnostic. Works equally well when your shell is `bash` or `fish` or `tcsh`.
 
 By Jay Tuley
 https://github.com/jbtule/cdto
 
-###Usage:
+### Usage:
 
 Download [Latest cdto.zip](https://github.com/jbtule/cdto/releases/latest)
 
-To install "cd to.app" copy it from the appropriate sub-folder (iterm//x11_xterm/unsigned per your choice) to your Applications folder, and then from the applications folder drag it into the Finder toolbar (10.9 Mavericks requires ⌘ + ⌥) 
+To install "cd to.app" copy it from the appropriate sub-folder (iterm//x11_xterm/unsigned per your choice) to your Applications folder, and then from the applications folder drag it into the Finder toolbar (10.9 Mavericks requires <kbd>⌘</kbd> + <kbd>⌥</kbd>) 
 
 To use, just click on the new button and instanly opens a new terminal window.
 
-For old versions to use with iTerm or X11/xterm, using the finder contextual menu "show package contents"  and exchange the plugins in the Plugin/Plugin Disabled folders respectively.  Next time you run  "cd to ..." it should open with the correct application.
+For old versions to use with iTerm or X11/xterm, using the finder contextual menu "Show Package Contents"  and exchange the plugins in the Plugin/Plugin Disabled folders respectively.  Next time you run `cd to ...` it should open with the correct application.
 
 
-###Changes:
+### Changes:
 Version 2.6
  * Fixed bug where get info window interferes
- * works on selected folder again
+ * Works on selected folder again
  * iTerm 2 plugin update
 
 Version 2.5
  * Lion Version
  * Use terminal open apple event
- * works with tcsh as well as bash
+ * Works with `tcsh` as well as `bash`
  * New Icons
 
 Version 2.3
@@ -51,13 +51,13 @@ Version 2.1
  * Terminal plugin will try to avoid opening two windows on terminal.app's launch
 
 Version 2.0 (2005)
- * Ported to objective-c using appscript, boosting launch & execution speed
- * properly resolves aliases
- * no longer shows icon in dock on launch
+ * Ported to Objective-C using Appscript, boosting launch & execution speed
+ * Properly resolves aliases
+ * No longer shows icon in Dock on launch
  
 Version 1.0 (2003)
-  * targeted Panther OS X 10.3
-  * was applescript
+ * Gargeted Panther OS X 10.3
+ * Was AppleScript
 
 Pre 1.0 (2001)
-   Really old applescript
+   Really old AppleScript
