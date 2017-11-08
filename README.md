@@ -14,6 +14,7 @@ https://github.com/jbtule/cdto
 Download [Latest cdto.zip](https://github.com/jbtule/cdto/releases/latest)
 
 To install "cd to.app" copy it from the appropriate sub-folder (iterm//x11_xterm/unsigned per your choice) to your Applications folder, and then from the applications folder drag it into the Finder toolbar (10.9 Mavericks requires ⌘ + ⌥) 
+Be noted to drag from another finder window to toolbar being customised
 
 To use, just click on the new button and instanly opens a new terminal window.
 
