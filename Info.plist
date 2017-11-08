@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>cd to</string>
 	<key>CFBundleIconFile</key>
-	<string>lion.icns</string>
+	<string>yosemite.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>name.tuley.jay.cdto</string>
 	<key>CFBundleInfoDictionaryVersion</key>
