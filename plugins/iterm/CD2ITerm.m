@@ -11,9 +11,13 @@
 @implementation CD2ITerm
 -(BOOL)openTermWindowForPath:(NSString*)aPath{
 	@try{
-        
-        [[NSWorkspace sharedWorkspace] openFile:[aPath stringByExpandingTildeInPath] withApplication:@"iTerm.app"];
+        NSString *iterm2AbsolutePath;
+        iterm2AbsolutePath = [[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier:@"com.googlecode.iterm2"];
 
+        if (iterm2AbsolutePath)
+            [[NSWorkspace sharedWorkspace] openFile:[aPath stringByExpandingTildeInPath]
+                                    withApplication:iterm2AbsolutePath
+                                      andDeactivate:YES];
 
 	}@catch(id test){
 		return NO;
