@@ -52,47 +52,44 @@ extension SBObject: FinderFinderWindow {}
 }
 extension SBApplication: TerminalApplication {}
 
-func run () -> Int32 {
-        let finder:FinderApplication = SBApplication(bundleIdentifier: "com.apple.finder")!
-        let selectCmd = finder.selection
-        let maybeSel:Array? = selectCmd?.get() as! Array<SBObject>?
-    
-        var target:FinderItem? = .none
-        
-        if let sel = maybeSel {
-            if sel.count > 0 {
-                target = sel.first
-            }
-        }else{
-            let windows = finder.FinderWindows?()
-            let window:FinderFinderWindow? = windows?.object(at: 0) as? FinderFinderWindow
-            target = window?.target
-        }
-    
-        if target?.kind == "Alias" {
-            target = target?.originalItem?.get() as! FinderItem?
-        }
-        
-        let fileUrl = target?.URL
-        var url:URL? = .none
-        if let fUrl = fileUrl {
-            if fUrl != "" {
-                let temp = URL(fileURLWithPath: fUrl)
-                url = .some(temp)
-                if fUrl.last != "/" {
-                    url = .some(temp.deletingLastPathComponent())
-                }
-            }
-        }
-    
-        let terminal:TerminalApplication = SBApplication(bundleIdentifier: "com.apple.Terminal")!
-        terminal.activate()
-        if let final = url {
-            terminal.open?(final)
-        } else {
-            terminal.open?(URL(fileURLWithPath: "/home/"))
-        }
-    
-        return 0
+let finder:FinderApplication = SBApplication(bundleIdentifier: "com.apple.finder")!
+let selectCmd = finder.selection
+let maybeSel:Array? = selectCmd?.get() as! Array<SBObject>?
+
+var target:FinderItem? = .none
+
+if let sel = maybeSel {
+    if sel.count > 0 {
+        target = sel.first
     }
-exit(run())
+}else{
+    let windows = finder.FinderWindows?()
+    let window:FinderFinderWindow? = windows?.object(at: 0) as? FinderFinderWindow
+    target = window?.target
+}
+
+if target?.kind == "Alias" {
+    target = target?.originalItem?.get() as! FinderItem?
+}
+
+let fileUrl = target?.URL
+var url:URL? = .none
+if let fUrl = fileUrl {
+    if fUrl != "" {
+        let temp = URL(fileURLWithPath: fUrl)
+        url = .some(temp)
+        if fUrl.last != "/" {
+            url = .some(temp.deletingLastPathComponent())
+        }
+    }
+}
+
+let terminal:TerminalApplication = SBApplication(bundleIdentifier: "com.apple.Terminal")!
+terminal.activate()
+if let final = url {
+    terminal.open?(final)
+} else {
+    terminal.open?(URL(fileURLWithPath: "/home/"))
+}
+
+

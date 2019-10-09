@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6940C15E234DAFA2004EA4D3 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6940C15D234DAFA2004EA4D3 /* AppIcon.icns */; };
 		69E5C3E6234700DF00D95CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E5C3E5234700DF00D95CEF /* Assets.xcassets */; };
 		69E5C3F32347011800D95CEF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E5C3F22347011800D95CEF /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6940C15D234DAFA2004EA4D3 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		69E5C3E0234700DE00D95CEF /* cd to ....app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cd to ....app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E5C3E5234700DF00D95CEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69E5C3EA234700DF00D95CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		69E5C3E2234700DE00D95CEF /* cd to ... */ = {
 			isa = PBXGroup;
 			children = (
+				6940C15D234DAFA2004EA4D3 /* AppIcon.icns */,
 				69E5C3E5234700DF00D95CEF /* Assets.xcassets */,
 				69E5C3EA234700DF00D95CEF /* Info.plist */,
 				69E5C3EB234700DF00D95CEF /* cd_to____.entitlements */,
@@ -92,7 +95,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "James Tuley";
 				TargetAttributes = {
 					69E5C3DF234700DE00D95CEF = {
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E5C3E6234700DF00D95CEF /* Assets.xcassets in Resources */,
+				6940C15E234DAFA2004EA4D3 /* AppIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +178,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -235,7 +239,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -263,6 +267,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "cd to .../cd_to____.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "cd to .../Info.plist";
@@ -284,6 +289,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "cd to .../cd_to____.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "cd to .../Info.plist";
