@@ -21,7 +21,7 @@ int main(int argc, const char * argv[]) {
                 
         FinderItem *target = [(NSArray*)[[finder selection] get] firstObject];
         if (target == nil){
-            target = [[[[finder FinderWindows] objectAtLocation:@0] target] get];
+            target = [[[[finder FinderWindows] objectAtLocation:@1] target] get];
         }
         
         if ([[target kind] isEqualToString:@"Alias"]){
