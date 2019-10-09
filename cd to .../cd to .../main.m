@@ -18,12 +18,10 @@ int main(int argc, const char * argv[]) {
         FinderApplication* finder = [SBApplication applicationWithBundleIdentifier:@"com.apple.Finder"];
         
         TerminalApplication* terminal = [SBApplication applicationWithBundleIdentifier:@"com.apple.Terminal"];
-              
-              
         
         FinderItem *target = [(NSArray*)[[finder selection] get] firstObject];
         if (target == nil){
-            target = [[[[finder FinderWindows] firstObject] target] get];
+            target = [[[[finder FinderWindows] objectAtLocation:@0] target] get];
         }
         
         if ([[target kind] isEqualToString:@"Alias"]){
@@ -40,7 +38,7 @@ int main(int argc, const char * argv[]) {
         [terminal activate];
         
         if (url == nil){
-            [terminal open:@[[NSURL fileURLWithPath:@"/home/"]]];
+            [terminal open:@[[NSURL fileURLWithPath:@"~/"]]];
         } else{
             [terminal open:@[url]];
         }
