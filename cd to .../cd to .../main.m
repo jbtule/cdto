@@ -37,8 +37,24 @@ int main(int argc, const char * argv[]) {
         
         
         if (url != nil){
-            [terminal activate];
+            if ([[terminal windows] count] == 1){
+                TerminalWindow* win = [[terminal windows] objectAtLocation:@1];
+                if([[win tabs] count] == 1){
+                    TerminalTab* tab = [[win tabs] objectAtLocation:@1];
+                    if(![tab busy]){
+                        NSUInteger rows = [tab numberOfRows];
+                        NSString* hist = [tab history];
+                        NSInteger histLength = [[hist componentsSeparatedByCharactersInSet:
+                        [NSCharacterSet newlineCharacterSet]] count];
+                        //a signle
+                        if(rows + 1 >= histLength){
+                            [win closeSaving:TerminalSaveOptionsNo savingIn:nil];
+                        }
+                    }
+                }
+            }
             [terminal open:@[url]];
+            [terminal activate];
         }
     }
 }
