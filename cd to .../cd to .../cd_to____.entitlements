@@ -4,14 +4,9 @@
 <dict>
 	<key>com.apple.security.automation.apple-events</key>
 	<true/>
-	<key>com.apple.security.scripting-targets</key>
-	<array>
-		<dict>
-			<key>com.apple.finder</key>
-			<array/>
-			<key>com.apple.terminal</key>
-			<array/>
-		</dict>
-	</array>
+	<key>com.apple.security.temporary-exception.apple-events</key>
+    <array>
+       <string>com.apple.finder</string>
+    </array>
 </dict>
 </plist>

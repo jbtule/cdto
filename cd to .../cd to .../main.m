@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
         FinderApplication* finder = [SBApplication applicationWithBundleIdentifier:@"com.apple.Finder"];
         
         TerminalApplication* terminal = [SBApplication applicationWithBundleIdentifier:@"com.apple.Terminal"];
-        
+                
         FinderItem *target = [(NSArray*)[[finder selection] get] firstObject];
         if (target == nil){
             target = [[[[finder FinderWindows] objectAtLocation:@0] target] get];
@@ -35,11 +35,9 @@ int main(int argc, const char * argv[]) {
         
         NSURL* url = [NSURL URLWithString:fileUrl];
         
-        [terminal activate];
         
-        if (url == nil){
-            [terminal open:@[[NSURL fileURLWithPath:@"~/"]]];
-        } else{
+        if (url != nil){
+            [terminal activate];
             [terminal open:@[url]];
         }
     }

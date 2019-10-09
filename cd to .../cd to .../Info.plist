@@ -30,5 +30,7 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Queries Finder and opens Terminal to it&apos;s location</string>
 </dict>
 </plist>
