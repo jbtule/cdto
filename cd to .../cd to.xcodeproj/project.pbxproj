@@ -13,7 +13,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		699EB3B9234DBA0C00CC2315 /* cd to ....app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cd to ....app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		699EB3B9234DBA0C00CC2315 /* cd to.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cd to.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		699EB3BF234DBA0D00CC2315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		699EB3C4234DBA0D00CC2315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		699EB3C5234DBA0D00CC2315 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		699EB3BA234DBA0C00CC2315 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				699EB3B9234DBA0C00CC2315 /* cd to ....app */,
+				699EB3B9234DBA0C00CC2315 /* cd to.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		699EB3B8234DBA0C00CC2315 /* cd to ... */ = {
+		699EB3B8234DBA0C00CC2315 /* cd to */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 699EB3CA234DBA0D00CC2315 /* Build configuration list for PBXNativeTarget "cd to ..." */;
+			buildConfigurationList = 699EB3CA234DBA0D00CC2315 /* Build configuration list for PBXNativeTarget "cd to" */;
 			buildPhases = (
 				699EB3B5234DBA0C00CC2315 /* Sources */,
 				699EB3B6234DBA0C00CC2315 /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = "cd to ...";
+			name = "cd to";
 			productName = "cd to ...";
-			productReference = 699EB3B9234DBA0C00CC2315 /* cd to ....app */;
+			productReference = 699EB3B9234DBA0C00CC2315 /* cd to.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -98,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 699EB3B4234DBA0C00CC2315 /* Build configuration list for PBXProject "cd to ..." */;
+			buildConfigurationList = 699EB3B4234DBA0C00CC2315 /* Build configuration list for PBXProject "cd to" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				699EB3B8234DBA0C00CC2315 /* cd to ... */,
+				699EB3B8234DBA0C00CC2315 /* cd to */,
 			);
 		};
 /* End PBXProject section */
@@ -264,7 +264,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "name.tuley.jay.cd-to----";
+				PRODUCT_BUNDLE_IDENTIFIER = "name.tuley.jay.cd-to";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -284,7 +284,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "name.tuley.jay.cd-to----";
+				PRODUCT_BUNDLE_IDENTIFIER = "name.tuley.jay.cd-to";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -292,7 +292,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		699EB3B4234DBA0C00CC2315 /* Build configuration list for PBXProject "cd to ..." */ = {
+		699EB3B4234DBA0C00CC2315 /* Build configuration list for PBXProject "cd to" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				699EB3C8234DBA0D00CC2315 /* Debug */,
@@ -301,7 +301,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		699EB3CA234DBA0D00CC2315 /* Build configuration list for PBXNativeTarget "cd to ..." */ = {
+		699EB3CA234DBA0D00CC2315 /* Build configuration list for PBXNativeTarget "cd to" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				699EB3CB234DBA0D00CC2315 /* Debug */,
