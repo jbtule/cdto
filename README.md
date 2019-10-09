@@ -22,7 +22,7 @@ For old versions to use with iTerm or X11/xterm, using the finder contextual men
 
 
 ### Changes:
-Version 3,0
+Version 3.0
 * temrinal app only supported, no plugins
 * rewritten to only use apple events
 * notatized
