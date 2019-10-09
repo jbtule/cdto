@@ -4,7 +4,7 @@
 Finder Toolbar app to open the current directory in the Terminal.
 
  * It's written in objective-c, and uses the scripting bridge so it's *fast*.
- * It's also shell agnostic. Works equally well when your shell is `bash` or `fish` or `tcsh`.
+ * It's also shell agnostic. Works equally well when your shell is `bash` or `fish` or `zsh`.
 
 By Jay Tuley
 https://github.com/jbtule/cdto
