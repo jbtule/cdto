@@ -181,7 +181,7 @@ typedef enum FinderLvic FinderLvic;
 
 - (void) quit;  // Quit the Finder
 - (void) activate;  // Activate the specified window (or the Finder)
-- (void) copy NS_RETURNS_NOT_RETAINED;  // (NOT AVAILABLE YET) Copy the selected items to the clipboard (the Finder must be the front application)
+
 - (void) eject;  // Eject the specified disk(s)
 - (void) emptySecurity:(BOOL)security;  // Empty the trash
 - (void) restart;  // Restart the computer
