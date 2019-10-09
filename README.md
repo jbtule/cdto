@@ -1,7 +1,7 @@
 ## cd to...
 <img src="https://raw.github.com/jbtule/cdto/master/graphics/lion.png" height="128px" width="128px" />
 
-Finder Toolbar app to open the current directory in the Terminal (or iTerm, X11)
+Finder Toolbar app to open the current directory in the Terminal.
 
  * It's written in objective-c, and uses the scripting bridge so it's *fast*.
  * It's also shell agnostic. Works equally well when your shell is `bash` or `fish` or `tcsh`.
@@ -22,6 +22,12 @@ For old versions to use with iTerm or X11/xterm, using the finder contextual men
 
 
 ### Changes:
+Version 3,0
+* temrinal app only supported, no plugins
+* rewritten to only use apple events
+* notatized
+* works on mojave (and hopefully catalinaj
+
 Version 2.6
  * Fixed bug where get info window interferes
  * works on selected folder again
