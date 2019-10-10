@@ -28,8 +28,7 @@ int main(int argc, const char * argv[]) {
         FinderFinderWindow* findWin = [[finder FinderWindows] objectAtLocation:@1];
         findWin = [[finder FinderWindows] objectWithID:[NSNumber numberWithInteger: findWin.id]];
         if (target == nil){
-            //Possible catalina fix from issue #40
-            target = (FinderFolder*) findWin.properties[@"target"];
+            target = [[findWin target] get];
         }
         
         if ([[target kind] isEqualToString:@"Alias"]){
