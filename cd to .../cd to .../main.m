@@ -53,6 +53,20 @@ int main(int argc, const char * argv[]) {
             TerminalWindow* newWin = [[terminal windows] objectAtLocation:@1];
             newWin = [[terminal windows] objectWithID: [NSNumber numberWithInteger:newWin.id]];
             TerminalTab* newTab = [[newWin tabs] objectAtLocation:@1];
+            
+            if(true) { //setting set
+                          NSString* setName = @"Grass";
+                          TerminalSettingsSet* chosenSet = nil;
+                          for (TerminalSettingsSet *set in [terminal settingsSets]) {
+                              if([[set name] isEqualToString:setName]){
+                                  chosenSet = set;
+                              }
+                          }
+                          if(chosenSet != nil){
+                              newTab.currentSettings = chosenSet;
+                          }
+                      }
+            
             if(true){ //close first launch window
                 if([[win tabs] count] == 1){
                     TerminalTab* tab = [[win tabs]objectAtLocation:@1];
@@ -70,10 +84,8 @@ int main(int argc, const char * argv[]) {
                     }
                 }
             }
-            if(true){ // move to space
-                NSPoint finderPoint = [win position];
-                [newWin setPosition:finderPoint];
-            }
+            
+          
             [terminal activate];
         }
     }
