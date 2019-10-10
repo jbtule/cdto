@@ -11,6 +11,7 @@
 
 #import "Finder.h"
 #import "Terminal.h"
+#import "SystemEvents.h"
 
 NSUInteger linesOfHistory(TerminalTab* tab) {
    NSString* hist = [[tab history] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
@@ -26,7 +27,7 @@ int main(int argc, const char * argv[]) {
                 
         FinderItem *target = [(NSArray*)[[finder selection] get] firstObject];
         FinderFinderWindow* findWin = [[finder FinderWindows] objectAtLocation:@1];
-        NSRect findBounds = [findWin bounds];
+        findWin = [[finder FinderWindows] objectWithID:[NSNumber numberWithInteger: findWin.id]];
         if (target == nil){
             target = [[findWin target] get];
         }
@@ -64,20 +65,18 @@ int main(int argc, const char * argv[]) {
                             [NSThread sleepForTimeInterval:0.1f];
                         }
                         NSUInteger newTabLines = linesOfHistory(newTab);
-                        NSLog(@"%lu",(unsigned long)oldTabLines);
-                        NSLog(@"%lu",(unsigned long)newTabLines);
                         if(oldTabLines == newTabLines){
                             [win closeSaving:TerminalSaveOptionsNo savingIn:nil];
                         }
-                    }else{
-                        NSLog(@"busy");
                     }
                 }
             }
             if(true){ // move to space
-                NSRect oldBounds = [newWin bounds];
-                NSRect newBounds = NSMakeRect(findBounds.origin.x,findBounds.origin.y, oldBounds.size.height, oldBounds.size.width);
+              SystemEventsApplication* sysEvents = [SBApplication applicationWithBundleIdentifier:@"com.apple.systemevents"];
                 
+                id pos = [[[[[sysEvents processes] objectWithName:@"Finder"] windows] objectWithID:[NSNumber numberWithInteger:findWin.id]] position];
+                
+                [[[[sysEvents processes] objectWithName:@"Terminal"] windows] objectWithID:[NSNumber numberWithInteger:newWin.id]].position=pos;
             }
             [terminal activate];
         }
