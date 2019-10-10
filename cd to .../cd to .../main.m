@@ -55,7 +55,8 @@ int main(int argc, const char * argv[]) {
             newWin = [[terminal windows] objectWithID: [NSNumber numberWithInteger:newWin.id]];
             TerminalTab* newTab = [[newWin tabs] objectAtLocation:@1];
             
-            if(true) { //setting set
+            NSString* setName = [[NSUserDefaults standardUserDefaults] stringForKey:@"cdto-new-window-setting"];
+            if(setName != nil && ![setName isEqualToString:@""]) { //setting set
                           NSString* setName = @"Grass";
                           TerminalSettingsSet* chosenSet = nil;
                           for (TerminalSettingsSet *set in [terminal settingsSets]) {
@@ -68,7 +69,7 @@ int main(int argc, const char * argv[]) {
                           }
                       }
             
-            if(true){ //close first launch window
+            if([[NSUserDefaults standardUserDefaults] boolForKey:@"cdto-close-default-window"]){ //close first launch window
                 if([[win tabs] count] == 1){
                     TerminalTab* tab = [[win tabs]objectAtLocation:@1];
                     if(![tab busy]){
