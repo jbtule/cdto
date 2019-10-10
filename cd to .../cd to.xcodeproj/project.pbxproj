@@ -13,7 +13,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		69167C67234EE3CD004D28C9 /* SystemEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemEvents.h; sourceTree = "<group>"; };
 		699EB3B9234DBA0C00CC2315 /* cd to.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cd to.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		699EB3BF234DBA0D00CC2315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		699EB3C4234DBA0D00CC2315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +53,6 @@
 		699EB3BB234DBA0C00CC2315 /* cd to ... */ = {
 			isa = PBXGroup;
 			children = (
-				69167C67234EE3CD004D28C9 /* SystemEvents.h */,
 				699EB3D4234DC4D800CC2315 /* AppIcon.icns */,
 				699EB3D2234DBB0700CC2315 /* Finder.h */,
 				699EB3D3234DBB0700CC2315 /* Terminal.h */,

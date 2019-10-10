@@ -11,7 +11,6 @@
 
 #import "Finder.h"
 #import "Terminal.h"
-#import "SystemEvents.h"
 
 NSUInteger linesOfHistory(TerminalTab* tab) {
    NSString* hist = [[tab history] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
@@ -72,11 +71,8 @@ int main(int argc, const char * argv[]) {
                 }
             }
             if(true){ // move to space
-              SystemEventsApplication* sysEvents = [SBApplication applicationWithBundleIdentifier:@"com.apple.systemevents"];
-                
-                id pos = [[[[[sysEvents processes] objectWithName:@"Finder"] windows] objectAtIndex:1] position];
-                
-                [[[[sysEvents processes] objectWithName:@"Terminal"] windows] objectAtIndex:1].position=pos;
+                NSPoint finderPoint = [win position];
+                [newWin setPosition:finderPoint];
             }
             [terminal activate];
         }
