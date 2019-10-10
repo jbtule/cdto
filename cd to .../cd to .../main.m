@@ -74,9 +74,9 @@ int main(int argc, const char * argv[]) {
             if(true){ // move to space
               SystemEventsApplication* sysEvents = [SBApplication applicationWithBundleIdentifier:@"com.apple.systemevents"];
                 
-                id pos = [[[[[sysEvents processes] objectWithName:@"Finder"] windows] objectWithID:[NSNumber numberWithInteger:findWin.id]] position];
+                id pos = [[[[[sysEvents processes] objectWithName:@"Finder"] windows] objectAtIndex:1] position];
                 
-                [[[[sysEvents processes] objectWithName:@"Terminal"] windows] objectWithID:[NSNumber numberWithInteger:newWin.id]].position=pos;
+                [[[[sysEvents processes] objectWithName:@"Terminal"] windows] objectAtIndex:1].position=pos;
             }
             [terminal activate];
         }
