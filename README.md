@@ -40,6 +40,7 @@ defaults write name.tuley.jay.cd-to cdto-new-window-setting -string "Red Sands"
 ### Changes:
 
 Version 3.1
+ * Restored name to "cd to.app"
  * *bug* fix 3.0 introduced bug for opening windows without selection
  * Faster
  * Less entitlements
