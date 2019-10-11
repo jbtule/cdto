@@ -43,6 +43,7 @@ Version 3.1
  * Restored name to "cd to.app"
  * *bug* fix 3.0 introduced bug for opening windows without selection
  * Faster
+ * Fix Regression: Hide icon in dock
  * Less entitlements
  * Setting to enable feature that closes extra opened windows
  * Setting to enable choosing a different terminal theme for opened windows
