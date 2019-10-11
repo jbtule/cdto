@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'X11_xterm' target in the 'X11_xterm' project.
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
