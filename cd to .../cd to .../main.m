@@ -56,7 +56,6 @@ int main(int argc, const char * argv[]) {
             
             NSString* setName = [[NSUserDefaults standardUserDefaults] stringForKey:@"cdto-new-window-setting"];
             if(setName != nil && ![setName isEqualToString:@""]) { //setting set
-                          NSString* setName = @"Grass";
                           TerminalSettingsSet* chosenSet = nil;
                           for (TerminalSettingsSet *set in [terminal settingsSets]) {
                               if([[set name] isEqualToString:setName]){
