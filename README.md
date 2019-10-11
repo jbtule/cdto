@@ -1,4 +1,4 @@
-## cd to...
+## cd to... [![Latest Release](https://img.shields.io/github/release/jbtule/cdto.svg)](https://github.com/jbtule/cdto/releases/latest)
 <img src="https://raw.github.com/jbtule/cdto/master/graphics/lion.png" height="128px" width="128px" />
 
 Finder Toolbar app to open the current directory in the Terminal.
@@ -14,19 +14,18 @@ https://github.com/jbtule/cdto
 Download [Latest cdto.zip](https://github.com/jbtule/cdto/releases/latest)
 
 
-To install "cd to ....app" copy to your Applications folder, and then from the applications folder drag it into the Finder toolbar (10.9 Mavericks later required ⌘ + ⌥) or drag from another finder window to toolbar being customised
+To install "cd to ....app" copy to your Applications folder, and then from the applications folder ⌘ drag it into the Finder toolbar or drag from another finder window to toolbar being customized.
 
-To use, just click on the new button and instanly opens a new terminal window.
-
-For old versions to use with iTerm or X11/xterm, using the finder contextual menu "show package contents"  and exchange the plugins in the Plugin/Plugin Disabled folders respectively.  Next time you run  "cd to ..." it should open with the correct application.
+To use, just click on the new button and instantly opens a new terminal window.
 
 
 ### Changes:
+
 Version 3.0
-* temrinal app only supported, no plugins
+* terminal app only supported, no plugins
 * rewritten to only use apple events
-* notatized
-* works on mojave (and hopefully catalinaj
+* Hardened, and Notarized
+* works on Mojave (and hopefully Catalina)
 
 Version 2.6
  * Fixed bug where get info window interferes
