@@ -44,6 +44,7 @@ Version 3.1
  * *bug* fix 3.0 introduced bug for opening windows without selection
  * Faster
  * Fix Regression: Hide icon in dock
+ * if package is selected, cd parent directory, if in package cd own directory
  * Less entitlements
  * Setting to enable feature that closes extra opened windows
  * Setting to enable choosing a different terminal theme for opened windows

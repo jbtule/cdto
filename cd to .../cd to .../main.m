@@ -27,8 +27,10 @@ int main(int argc, const char * argv[]) {
         FinderItem *target = [(NSArray*)[[finder selection] get] firstObject];
         FinderFinderWindow* findWin = [[finder FinderWindows] objectAtLocation:@1];
         findWin = [[finder FinderWindows] objectWithID:[NSNumber numberWithInteger: findWin.id]];
+        bool selected = true;
         if (target == nil){
             target = [[findWin target] get];
+            selected = false;
         }
         
         if ([[target kind] isEqualToString:@"Alias"]){
@@ -36,7 +38,7 @@ int main(int argc, const char * argv[]) {
         }
         
         NSString* fileUrl = [target URL];
-        if(fileUrl != nil && ![fileUrl hasSuffix:@"/"]){
+        if(fileUrl != nil && ![fileUrl hasSuffix:@"/"] && selected){
             fileUrl = [fileUrl stringByDeletingLastPathComponent];
         }
         
