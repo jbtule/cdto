@@ -259,7 +259,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = VURRGRYW45;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "cd to .../Info.plist";
@@ -267,7 +267,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.tuley.jay.cd-to";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -281,7 +281,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = VURRGRYW45;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "cd to .../Info.plist";
@@ -289,7 +289,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 3.1;
+				MARKETING_VERSION = 3.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "name.tuley.jay.cd-to";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
