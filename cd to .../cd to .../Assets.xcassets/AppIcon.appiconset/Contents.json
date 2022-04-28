@@ -7,7 +7,7 @@
       "size" : "16x16"
     },
     {
-      "filename" : "monterey32-1.png",
+      "filename" : "monterey16@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
@@ -19,7 +19,7 @@
       "size" : "32x32"
     },
     {
-      "filename" : "monterey64.png",
+      "filename" : "monterey32@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
@@ -31,7 +31,7 @@
       "size" : "128x128"
     },
     {
-      "filename" : "monterey256-1.png",
+      "filename" : "monterey128@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
@@ -43,7 +43,7 @@
       "size" : "256x256"
     },
     {
-      "filename" : "monterey512-1.png",
+      "filename" : "monterey256@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
@@ -55,7 +55,7 @@
       "size" : "512x512"
     },
     {
-      "filename" : "monterey.png",
+      "filename" : "monterey512@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
