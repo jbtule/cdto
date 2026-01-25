@@ -20,6 +20,20 @@ To use, just click on the new button and instantly opens a new terminal window.
 
 ### Settings
 
+To configure which terminal application to use (defaults to Terminal.app):
+
+```bash
+# Use Terminal.app (default)
+defaults write name.tuley.jay.cd-to cdto-terminal-app -string "Terminal"
+
+# Use iTerm2
+defaults write name.tuley.jay.cd-to cdto-terminal-app -string "iTerm"
+
+# Or use bundle identifiers
+defaults write name.tuley.jay.cd-to cdto-terminal-app -string "com.apple.Terminal"
+defaults write name.tuley.jay.cd-to cdto-terminal-app -string "com.googlecode.iterm2"
+```
+
 To turn on feature that identifies automatically opened  Terminal windows, and closes them when using *cd to*.
 
 ```bash
