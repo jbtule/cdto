@@ -21,6 +21,7 @@
 		699EB3D2234DBB0700CC2315 /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		699EB3D3234DBB0700CC2315 /* Terminal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Terminal.h; sourceTree = "<group>"; };
 		699EB3D4234DC4D800CC2315 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		699EB3D6234DBB0700CC2315 /* iTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTerm.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 				699EB3D4234DC4D800CC2315 /* AppIcon.icns */,
 				699EB3D2234DBB0700CC2315 /* Finder.h */,
 				699EB3D3234DBB0700CC2315 /* Terminal.h */,
+				699EB3D6234DBB0700CC2315 /* iTerm.h */,
 				699EB3BF234DBA0D00CC2315 /* Assets.xcassets */,
 				699EB3C4234DBA0D00CC2315 /* Info.plist */,
 				699EB3C5234DBA0D00CC2315 /* main.m */,
