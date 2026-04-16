@@ -34,6 +34,12 @@ _Eg. if you wanted cd to windows to be "Red Sands"_
 defaults write name.tuley.jay.cd-to cdto-new-window-setting -string "Red Sands"
 ```
 
+To support ghostty:
+
+```bash
+defaults write name.tuley.jay.cd-to cdto-terminal-app ghostty
+```
+
 
 
 
@@ -93,7 +99,7 @@ Version 2.0 (2005)
  * Ported to objective-c using appscript, boosting launch & execution speed
  * properly resolves aliases
  * no longer shows icon in dock on launch
- 
+
 Version 1.0 (2003)
   * targeted Panther OS X 10.3
   * was applescript
