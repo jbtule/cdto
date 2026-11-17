@@ -1,0 +1,63 @@
+{
+  "fill" : "automatic",
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "image-name" : "Tahoe_src1.svg",
+          "name" : "Tahoe_src1"
+        },
+        {
+          "blend-mode" : "normal",
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : {
+                "solid" : "display-p3:0.33497,0.32693,0.33546,1.00000"
+              }
+            }
+          ],
+          "image-name" : "Tahoe_src2.svg",
+          "name" : "Tahoe_src2"
+        },
+        {
+          "image-name" : "Tahoe_src3.svg",
+          "name" : "Tahoe_src3"
+        },
+        {
+          "fill-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : {
+                "solid" : "display-p3:0.33497,0.32693,0.33546,1.00000"
+              }
+            }
+          ],
+          "image-name" : "Tahoe_src4.svg",
+          "name" : "Tahoe_src4"
+        }
+      ],
+      "position" : {
+        "scale" : 1.3,
+        "translation-in-points" : [
+          0,
+          0
+        ]
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

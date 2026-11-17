@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690A22B82E3EE28300168C23 /* tahoe.icon in Resources */ = {isa = PBXBuildFile; fileRef = 690A22B72E3EE28300168C23 /* tahoe.icon */; };
 		699EB3C0234DBA0D00CC2315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699EB3BF234DBA0D00CC2315 /* Assets.xcassets */; };
 		699EB3C6234DBA0D00CC2315 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 699EB3C5234DBA0D00CC2315 /* main.m */; };
-		699EB3D5234DC4D800CC2315 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 699EB3D4234DC4D800CC2315 /* AppIcon.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		690A22B72E3EE28300168C23 /* tahoe.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = tahoe.icon; sourceTree = "<group>"; };
 		699EB3B9234DBA0C00CC2315 /* cd to.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cd to.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		699EB3BF234DBA0D00CC2315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		699EB3C4234DBA0D00CC2315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -20,7 +21,6 @@
 		699EB3C7234DBA0D00CC2315 /* cd_to.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cd_to.entitlements; sourceTree = "<group>"; };
 		699EB3D2234DBB0700CC2315 /* Finder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
 		699EB3D3234DBB0700CC2315 /* Terminal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Terminal.h; sourceTree = "<group>"; };
-		699EB3D4234DC4D800CC2315 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 		699EB3BB234DBA0C00CC2315 /* cd to ... */ = {
 			isa = PBXGroup;
 			children = (
-				699EB3D4234DC4D800CC2315 /* AppIcon.icns */,
+				690A22B72E3EE28300168C23 /* tahoe.icon */,
 				699EB3D2234DBB0700CC2315 /* Finder.h */,
 				699EB3D3234DBB0700CC2315 /* Terminal.h */,
 				699EB3BF234DBA0D00CC2315 /* Assets.xcassets */,
@@ -121,8 +121,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				690A22B82E3EE28300168C23 /* tahoe.icon in Resources */,
 				699EB3C0234DBA0D00CC2315 /* Assets.xcassets in Resources */,
-				699EB3D5234DC4D800CC2315 /* AppIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +254,7 @@
 		699EB3CB234DBA0D00CC2315 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = tahoe;
 				CODE_SIGN_ENTITLEMENTS = "cd to .../cd_to.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -276,7 +276,7 @@
 		699EB3CC234DBA0D00CC2315 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = tahoe;
 				CODE_SIGN_ENTITLEMENTS = "cd to .../cd_to.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
